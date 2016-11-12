@@ -12,18 +12,12 @@ public class Phase2 : MonoBehaviour {
 	public bool upperLimitReached;
 	public bool startDescent;
 	List<TextElement> dialogue;
-	private string test1 = "Come in, is there a problem?";
-	private string test2 = "Try pulling down the top right lever to raise yourself!";
+
 
     // Use this for initialization
     public void Start () {
 		dialogue = new List<TextElement> ();
 
-		TextElement element1 = new TextElement(test1,0.1f);
-		TextElement element2 = new TextElement(test2,0.1f);
-
-		dialogue.Add (element1);
-		dialogue.Add (element2);
 		EventManager.CallTextWriter (dialogue);
 	}
 	

@@ -7,8 +7,8 @@ public class Phase1 : MonoBehaviour {
     public float upperLimit;
 	public float lowerLimit;
 	private float timer = 0.0f;
-	private float surfaceWaitTime = 25.0f;
-	private float phase1WaitTime = 15.0f;
+	private float surfaceWaitTime = 28.0f;
+	private float phase1WaitTime = 28.0f;
 	public float changeSpeed;
     public GameObject BathySphere;
 	public Color highestSurface;
@@ -16,27 +16,21 @@ public class Phase1 : MonoBehaviour {
 	public bool upperLimitReached;
 	public bool startDescent;
 	List<TextElement> dialogue;
-	private string test1 = "Tree is an awesome dude!";
-	private string test2 = "The princess has exited the castle! You have to go find her";
-	private string test3 = "The Vader is in the water for you !!!";
-	private string test4 = "Maybe you should consider the razor";
-
 
     // Use this for initialization
     public void Start () {
 		RenderSettings.fogColor = phase1Color;
 
 		dialogue = new List<TextElement> ();
-
-		TextElement element1 = new TextElement(test1,0.1f);
-		TextElement element2 = new TextElement(test2,0.1f);
-		TextElement element3 = new TextElement(test3,0.1f);
-		TextElement element4 = new TextElement(test4,0.1f);
-
-		dialogue.Add (element1);
-		dialogue.Add (element2);
-		dialogue.Add (element3);
-		dialogue.Add (element4);
+		dialogue.Add (new TextElement("Glad to have you back!",0.1f,4f));
+		dialogue.Add (new TextElement("Hang tight",0.1f,2f));
+		dialogue.Add (new TextElement("I'll have you on land in no time",0.1f,4f));
+		dialogue.Add (new TextElement("What's going on?",0.1f,4f));
+		dialogue.Add (new TextElement("Why are you descending?",0.1f,4f));
+		dialogue.Add (new TextElement("It's alright",0.1f,2f));
+		dialogue.Add (new TextElement("We can fix this",0.1f,4f));
+		dialogue.Add (new TextElement("Pull that lever to your right",0.1f,4f));
+		dialogue.Add (new TextElement("That should put you back on course",0.1f,5f));
 		EventManager.CallTextWriter (dialogue);
 	}
 	
@@ -56,7 +50,7 @@ public class Phase1 : MonoBehaviour {
 			}
 		}
 		if (startDescent) {
-			Color currentColor = Color.Lerp (RenderSettings.fogColor,phase1Color,changeSpeed * 1.5f);
+			Color currentColor = Color.Lerp (RenderSettings.fogColor,phase1Color,changeSpeed);
 			RenderSettings.fogColor = currentColor;
 
 			if (timer > phase1WaitTime) {
