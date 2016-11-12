@@ -59,7 +59,7 @@ public class lever : MonoBehaviour
             Quaternion quate = Quaternion.identity;
             quate.eulerAngles = new Vector3(initPosition.y - Input.mousePosition.y, 0, 0);
 
-            Debug.Log(initPosition.y - Input.mousePosition.y);
+            //Debug.Log(initPosition.y - Input.mousePosition.y);
 
             if (initPosition.y - Input.mousePosition.y > MIN_Angle && initPosition.y - Input.mousePosition.y < MAX_Angle)
             {
