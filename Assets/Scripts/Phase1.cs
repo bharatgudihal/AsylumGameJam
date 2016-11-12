@@ -17,8 +17,21 @@ public class Phase1 : MonoBehaviour {
 	public bool startDescent;
 	List<TextElement> dialogue;
 
+	//the audio clips for this phase
+	public AudioClip[] phase1AudioClips;
+	public AudioClip[] phase1SfxClips;
+
+
+
+
+
+
     // Use this for initialization
     public void Start () {
+		
+		AudioManager.instance.PlayMusic (phase1AudioClips[0],true);
+		AudioManager.instance.PlayMusic (phase1AudioClips[1],true);
+
 		RenderSettings.fogColor = phase1Color;
 
 		dialogue = new List<TextElement> ();
@@ -61,7 +74,12 @@ public class Phase1 : MonoBehaviour {
 	}
 
 	IEnumerator  WaitForOneSecond(){
-		
+
+		//Reached the top
+		AudioManager.instance.StopMusic();
+		AudioManager.instance.PlayOneShotSFX (phase1SfxClips [0]);
+
+		//Trigger the audio to stop
 		yield return new WaitForSeconds (1.0f);
 		EventManager.CameraShaker (0.03f, 0.0005f);
 		startDescent = true;
