@@ -11,7 +11,7 @@ public class backgroundMoving : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        transform.localPosition = new Vector3(0, initPosition_Y, 0);
+        transform.localPosition = new Vector3(0, initPosition_Y, gameObject.transform.localPosition.z);
     }
 	
 	// Update is called once per frame
@@ -21,7 +21,7 @@ public class backgroundMoving : MonoBehaviour
 
         if(transform.localPosition.y >= MAX_Position_Y)
         {
-            transform.localPosition = new Vector3(0, initPosition_Y, 0);
+            transform.localPosition = new Vector3(0, initPosition_Y, gameObject.transform.localPosition.z);
         }
 
     }
