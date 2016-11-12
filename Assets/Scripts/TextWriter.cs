@@ -7,15 +7,17 @@ public class TextElement{
 
 	private string text;
 	private float delayTime;
+	private float timeVisible;
 
 	//the gets
 	public string GetText(){return text;}
 	public float GetDelay(){return delayTime;}
 
 
-	public TextElement(string p_text, float p_delayTime){
+	public TextElement(string p_text, float p_delayTime, float timeVisible){
 		this.text = p_text;
 		this.delayTime = p_delayTime;
+		this.timeVisible = timeVisible;
 	}
 
 	public IEnumerator DisplayText(Text uiText)
@@ -29,7 +31,7 @@ public class TextElement{
 			yield return new WaitForSeconds (this.GetDelay());
 		}
 
-		yield return TextPause (uiText,2f);
+		yield return TextPause (uiText,timeVisible);
 	}
 
 	private IEnumerator TextPause(Text uiText,float pauseTime)
