@@ -4,50 +4,53 @@ using System.Collections.Generic;
 
 public class Phase2 : MonoBehaviour {
 
-    public float upperLimit;
-	public float lowerLimit;
     public GameObject BathySphere;
-	public float climbSpeed;
-	public float descendSpeed;
-	public bool upperLimitReached;
-	public bool startDescent;
 	List<TextElement> dialogue;
-
+	public Color targetColor;
+	float timer;
+	float descentTime = 10f;
+	public float colorChangeSpeed;
+	public float positionChangeSpeed;
+	public float finalPosition;
+	int state = 0;
 
     // Use this for initialization
     public void Start () {
 		dialogue = new List<TextElement> ();
+		//EventManager.CallTextWriter (dialogue);
+	}
 
-		EventManager.CallTextWriter (dialogue);
+	public void EnablePhase(){
+		state = 1;
+	}
+
+	public void DisablePhase(){
+		state = 0;
 	}
 	
 	// Update is called once per frame
 	public void Update () {		
-		if (!upperLimitReached) {
-			float initPos = BathySphere.transform.position.y;
-			float finalPos = Mathf.Lerp (initPos, upperLimit, climbSpeed);
-			BathySphere.transform.position = new Vector3(BathySphere.transform.position.x,finalPos,BathySphere.transform.position.z);
-			if (finalPos >= upperLimit-1) {
-				upperLimitReached = true;
-				StartCoroutine (WaitForOneSecond ());
+		switch (state) {
+		case 1:
+			timer += Time.deltaTime;
+			Color currentColor = Color.Lerp (RenderSettings.fogColor, targetColor, colorChangeSpeed);
+			RenderSettings.fogColor = currentColor;
+			if (timer > descentTime) {
+				timer = 0f;
+				state++;
 			}
-		}
-		if (startDescent) {
-			float initPos = BathySphere.transform.position.y;
-			float finalPos = Mathf.Lerp (initPos, lowerLimit, descendSpeed);
-			BathySphere.transform.position = new Vector3(BathySphere.transform.position.x,finalPos,BathySphere.transform.position.z);
-			if (finalPos <= lowerLimit+1) {
-				startDescent = false;
-				EventManager.CallPhaseChanger ();
+			break;
+		case 2:
+			float currentPosition = Mathf.Lerp (BathySphere.transform.position.y, finalPosition, positionChangeSpeed);
+			BathySphere.transform.position = new Vector3 (BathySphere.transform.position.x, currentPosition, BathySphere.transform.position.z);
+			if (currentPosition <= finalPosition + 0.1) {
+				state++;
+				EventManager.CallRockMovement ();
+				BathySphere.GetComponent<Animator> ().enabled = true;
 			}
+			break;
+		default:
+			break;
 		}
-	}
-
-	IEnumerator  WaitForOneSecond(){
-		yield return new WaitForSeconds (1.0f);
-		EventManager.CameraShaker (0.03f, 0.0005f);
-		startDescent = true;
-		yield return new WaitForSeconds (1.0f);
-		EventManager.CameraShaker (0.03f, 0.00009f);
 	}
 }
