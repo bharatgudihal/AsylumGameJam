@@ -43,21 +43,29 @@ public class lever : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             isLocking = false;
-            this.transform.rotation = Quaternion.identity;
+
+            Quaternion quate = Quaternion.identity;
+            quate.eulerAngles = new Vector3(45, 0, 0);
+
+            this.transform.localRotation = quate;
+
         }
 
 
         //If the lever is locking, we can move it!!!
         if(isLocking == true)
         {
+
             Quaternion quate = Quaternion.identity;
-            quate.eulerAngles = new Vector3(Input.mousePosition.y - initPosition.y, 0, 0);
+            quate.eulerAngles = new Vector3(initPosition.y - Input.mousePosition.y, 0, 0);
 
-            if (Input.mousePosition.y - initPosition.y > MIN_Angle && Input.mousePosition.y - initPosition.y < MAX_Angle)
+            Debug.Log(initPosition.y - Input.mousePosition.y);
+
+            if (initPosition.y - Input.mousePosition.y > MIN_Angle && initPosition.y - Input.mousePosition.y < MAX_Angle)
             {
-                this.transform.rotation = quate;
+                this.transform.localRotation = quate;
             }
-
+            
         }
 
     }
