@@ -10,6 +10,9 @@ public class EventManager : MonoBehaviour {
 	public delegate void ChangePhase ();
 	public static event ChangePhase phaseChanger;
 
+	public delegate void triggerMovement ();
+	public static event triggerMovement RockMovement;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -30,5 +33,10 @@ public class EventManager : MonoBehaviour {
 
 	public static void CallPhaseChanger(){
 		phaseChanger ();
+	}
+
+	public static void CallRockMovement()
+	{
+		RockMovement ();
 	}
 }
