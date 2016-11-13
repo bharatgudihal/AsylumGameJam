@@ -16,12 +16,13 @@ public class Phase4 : MonoBehaviour
 
 	public float duration = 1.0F;
 	public GameObject lightObject;
-	Light light;
+	Light cabinLight;
+	public List<SmallWaterLeakEffect> waterLeakEffects;
 
 	// Use this for initialization
 	public void Start () 
 	{
-		light = lightObject.GetComponent<Light> (); 
+		cabinLight = lightObject.GetComponent<Light> (); 
 		dialogue = new List<TextElement> ();
 
 		button_L = button_Object_L.gameObject.GetComponent<clickButton> ();
@@ -81,12 +82,19 @@ public class Phase4 : MonoBehaviour
 				button_R.isTrigger = false;
 
 				StartCoroutine (callText ("Good", 0.1f, 10));
-				StartCoroutine (Shinning (10.0f));
-
+				cabinLight.intensity = 0;
+				StartCoroutine (StartLeaking ());
+				StartCoroutine (TurnOffLights ());
+				EventManager.CallEffectsStarter ();
 				EventManager.CallPhaseChanger ();
 			}
 		}
 
+	}
+
+	IEnumerator TurnOffLights(){
+		yield return new WaitForSecondsRealtime(10f);
+		cabinLight.intensity = 0;
 	}
 		
 	IEnumerator Shinning(float time)
@@ -97,8 +105,7 @@ public class Phase4 : MonoBehaviour
 		{
 			float phi = Time.time / duration * 2 * Mathf.PI;
 			float amplitude = Mathf.Cos(phi) * 0.5F + 1.0F;
-			light.intensity = amplitude;
-
+			cabinLight.intensity = amplitude;
 			yield return 0;
 
 		}
@@ -121,4 +128,10 @@ public class Phase4 : MonoBehaviour
 		step = 7;
 	}
 
+	IEnumerator StartLeaking(){
+		foreach (SmallWaterLeakEffect effect in waterLeakEffects) {
+			effect.Enable ();
+		}
+		yield return null;
+	}
 }

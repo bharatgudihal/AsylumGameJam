@@ -28,9 +28,18 @@ public class EventManager : MonoBehaviour {
 	public delegate void endGame ();
 	public static event endGame GameEnder;
 
+	public delegate void StartEffects ();
+	public static event StartEffects effectsStarter;
+
+	public delegate void MoveFloor ();
+	public static event MoveFloor floorMover;
+
+	public SeaFloorImpactEffect impactEffect;
+	public static SeaFloorImpactEffect staticImpactEffect;
+
 	// Use this for initialization
 	void Start () {
-	
+		staticImpactEffect = impactEffect;
 	}
 	
 	// Update is called once per frame
@@ -70,5 +79,17 @@ public class EventManager : MonoBehaviour {
 
 	public static void CallGameEnder(){
 		GameEnder ();
+	}
+
+	public static void CallEffectsStarter(){
+		effectsStarter ();
+	}
+
+	public static void CallFloorMover(){
+		floorMover ();
+	}
+
+	public static void CallLandingEffect(){
+		staticImpactEffect.Burst ();
 	}
 }

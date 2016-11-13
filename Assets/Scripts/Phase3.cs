@@ -8,14 +8,14 @@ public class Phase3: MonoBehaviour {
 
 	public GameObject lever_Object;
 	clickButton button;
-
-
 	List<TextElement> dialogue;
 	public Color targetColor;
 	float timer;
 	float descentTime = 5f;
 	public float colorChangeSpeed;
 	int state = 0;
+	public List<SteamEffect> steamEffects;
+	public BubblesEffect bubbles;
 
 
     // Use this for initialization
@@ -35,6 +35,7 @@ public class Phase3: MonoBehaviour {
 		state = 1;
 		AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [2], true);
 		AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [3], true);
+		bubbles.Disable ();
 	}
 
 	public void DisablePhase(){
@@ -88,14 +89,19 @@ public class Phase3: MonoBehaviour {
 		AudioManager.instance.PlayOneShotSFX(AudioManager.instance.generalSFX[4]);
 		//AudioManager.instance.PlayOneShotSFX (phase1SfxClips [0]);
 		EventManager.CameraShaker (0.03f, 0.0005f);
-
+		foreach (SteamEffect effect in steamEffects) {
+			effect.Enable ();
+		}
 		yield return new WaitForSeconds (2.0f);
 
 		dialogue.Add (new TextElement("That will buy you some time", 0.1f, 4f));
 
 		EventManager.CallTextWriter (dialogue);
 		EventManager.CallLevelChanger ();
-		yield return new WaitForSeconds (6.0f);
+		yield return new WaitForSeconds (3.0f);
+		foreach (SteamEffect effect in steamEffects) {
+			effect.Disable ();
+		}
 		StartCoroutine (TransitionToPhase4() );
 	}
 
