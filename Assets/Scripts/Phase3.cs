@@ -94,7 +94,7 @@ public class Phase3: MonoBehaviour {
 		dialogue.Add (new TextElement("That will buy you some time", 0.1f, 4f));
 
 		EventManager.CallTextWriter (dialogue);
-
+		EventManager.CallLevelChanger ();
 		yield return new WaitForSeconds (6.0f);
 		StartCoroutine (TransitionToPhase4() );
 	}
