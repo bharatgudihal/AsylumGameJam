@@ -772,8 +772,10 @@ MonoBehaviour:
   generalSFX:
   - {fileID: 8300000, guid: 2fa113c53d2257441859cca5936cad6b, type: 3}
   - {fileID: 8300000, guid: ebebc7755d3b1ba4b97524e6e45aa6a0, type: 3}
+  - {fileID: 8300000, guid: ce61e7c476db1f34d944bf490d1a6644, type: 3}
   generalEnvironment:
   - {fileID: 8300000, guid: 7159d2cd7188e05488979b5a6ef7e77b, type: 3}
+  - {fileID: 8300000, guid: 066712777740ec7439976cf43360360e, type: 3}
 --- !u!1 &160477655
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,8 +1084,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 277771861}
   m_LocalRotation: {x: 0.7071068, y: -0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.00066276116, y: 0.008630635, z: -0.19932981}
-  m_LocalScale: {x: 7.7732005, y: 0.18873611, z: 7.7732005}
+  m_LocalPosition: {x: -0.00066276, y: 0.008630635, z: -0.19919}
+  m_LocalScale: {x: 8.006396, y: 0.1943982, z: 8.006396}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 160477656}
@@ -3493,6 +3495,7 @@ GameObject:
   - 114: {fileID: 1498923069}
   - 114: {fileID: 1498923071}
   - 114: {fileID: 1498923072}
+  - 114: {fileID: 1498923073}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -3564,6 +3567,20 @@ MonoBehaviour:
   colorChangeSpeed: 0.001
   positionChangeSpeed: 0.004
   finalPosition: 0
+--- !u!114 &1498923073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1498923068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07bb284abeed7a04682e6d37951c6342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BathySphere: {fileID: 160477655}
+  targetColor: {r: 0, g: 0.015686275, b: 0.023529412, a: 1}
+  colorChangeSpeed: 0.001
 --- !u!1 &1515030370
 GameObject:
   m_ObjectHideFlags: 0
