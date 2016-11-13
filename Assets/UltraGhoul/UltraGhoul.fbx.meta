@@ -1,0 +1,1185 @@
+fileFormatVersion: 2
+guid: 26b210d94f48f48479f4f4ea4a78c59a
+timeCreated: 1479005201
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Body1
+    100004: Body2
+    100006: Body2.001
+    100008: Chest
+    100010: Chest.001
+    100012: Chest.002
+    100014: Chest.002_end
+    100016: Hair
+    100018: Hair1
+    100020: Hair1.2
+    100022: Hair1.2_end
+    100024: Hair2
+    100026: Hair2.2
+    100028: Hair2.2_end
+    100030: Hair3
+    100032: Hair3.2
+    100034: Hair3.2_end
+    100036: Head
+    100038: Hip
+    100040: Hip.009
+    100042: Hip.012
+    100044: Hip.016
+    100046: L_Armtarget
+    100048: L_Armtarget_end
+    100050: L_ElbowTarget
+    100052: L_ElbowTarget_end
+    100054: L_Foot
+    100056: L_Foot_end
+    100058: L_KneeTarget
+    100060: L_KneeTarget_end
+    100062: L_Larm
+    100064: L_Larm.001
+    100066: L_Larm.002
+    100068: L_Larm.002_end
+    100070: L_LegTarget
+    100072: L_LegTarget_end
+    100074: L_Lleg
+    100076: L_Uarm
+    100078: L_ULeg
+    100080: LShoul
+    100082: Neck1
+    100084: Neck2
+    100086: R_ArmTarget
+    100088: R_ArmTarget_end
+    100090: R_ElbowTarget
+    100092: R_ElbowTarget_end
+    100094: R_Foot
+    100096: R_Foot_end
+    100098: R_KneeTarget
+    100100: R_KneeTarget_end
+    100102: R_Larm
+    100104: R_Larm.001
+    100106: R_Larm.002
+    100108: R_Larm.002_end
+    100110: R_LegTarget
+    100112: R_LegTarget_end
+    100114: R_Lleg
+    100116: R_Uarm
+    100118: R_Uleg
+    100120: Root
+    100122: SkinL
+    100124: SkinMiddle
+    100126: SkinR
+    100128: Stomach
+    100130: //RootNode
+    400000: Armature
+    400002: Body1
+    400004: Body2
+    400006: Body2.001
+    400008: Chest
+    400010: Chest.001
+    400012: Chest.002
+    400014: Chest.002_end
+    400016: Hair
+    400018: Hair1
+    400020: Hair1.2
+    400022: Hair1.2_end
+    400024: Hair2
+    400026: Hair2.2
+    400028: Hair2.2_end
+    400030: Hair3
+    400032: Hair3.2
+    400034: Hair3.2_end
+    400036: Head
+    400038: Hip
+    400040: Hip.009
+    400042: Hip.012
+    400044: Hip.016
+    400046: L_Armtarget
+    400048: L_Armtarget_end
+    400050: L_ElbowTarget
+    400052: L_ElbowTarget_end
+    400054: L_Foot
+    400056: L_Foot_end
+    400058: L_KneeTarget
+    400060: L_KneeTarget_end
+    400062: L_Larm
+    400064: L_Larm.001
+    400066: L_Larm.002
+    400068: L_Larm.002_end
+    400070: L_LegTarget
+    400072: L_LegTarget_end
+    400074: L_Lleg
+    400076: L_Uarm
+    400078: L_ULeg
+    400080: LShoul
+    400082: Neck1
+    400084: Neck2
+    400086: R_ArmTarget
+    400088: R_ArmTarget_end
+    400090: R_ElbowTarget
+    400092: R_ElbowTarget_end
+    400094: R_Foot
+    400096: R_Foot_end
+    400098: R_KneeTarget
+    400100: R_KneeTarget_end
+    400102: R_Larm
+    400104: R_Larm.001
+    400106: R_Larm.002
+    400108: R_Larm.002_end
+    400110: R_LegTarget
+    400112: R_LegTarget_end
+    400114: R_Lleg
+    400116: R_Uarm
+    400118: R_Uleg
+    400120: Root
+    400122: SkinL
+    400124: SkinMiddle
+    400126: SkinR
+    400128: Stomach
+    400130: //RootNode
+    4300000: SkinMiddle
+    4300002: SkinL
+    4300004: SkinR
+    4300006: Body2.001
+    4300008: Hair
+    4300010: Body1
+    4300012: Body2
+    7400000: Armature|Walk
+    7400002: Armature|WalkCycle
+    7400004: Armature|WalkCycle.001
+    7400006: Armature|WalkCycle.002
+    7400008: Armature|WalkCycle.003
+    7400010: Armature|WalkCycle.004
+    9500000: //RootNode
+    11100000: Body1
+    13700000: Body2
+    13700002: Body2.001
+    13700004: Hair
+    13700006: SkinL
+    13700008: SkinMiddle
+    13700010: SkinR
+    13700012: Body1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|Walk
+      takeName: Armature|Walk
+      firstFrame: 0
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/L_Armtarget
+        weight: 1
+      - path: Armature/L_Armtarget/L_Armtarget_end
+        weight: 1
+      - path: Armature/L_ElbowTarget
+        weight: 1
+      - path: Armature/L_ElbowTarget/L_ElbowTarget_end
+        weight: 1
+      - path: Armature/L_KneeTarget
+        weight: 1
+      - path: Armature/L_KneeTarget/L_KneeTarget_end
+        weight: 1
+      - path: Armature/L_LegTarget
+        weight: 1
+      - path: Armature/L_LegTarget/L_LegTarget_end
+        weight: 1
+      - path: Armature/R_ArmTarget
+        weight: 1
+      - path: Armature/R_ArmTarget/R_ArmTarget_end
+        weight: 1
+      - path: Armature/R_ElbowTarget
+        weight: 1
+      - path: Armature/R_ElbowTarget/R_ElbowTarget_end
+        weight: 1
+      - path: Armature/R_KneeTarget
+        weight: 1
+      - path: Armature/R_KneeTarget/R_KneeTarget_end
+        weight: 1
+      - path: Armature/R_LegTarget
+        weight: 1
+      - path: Armature/R_LegTarget/R_LegTarget_end
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Stomach
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Chest.001
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Chest.001/Chest.002
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Chest.001/Chest.002/Chest.002_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm/R_Larm.001
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm/R_Larm.001/R_Larm.002
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm/R_Larm.001/R_Larm.002/R_Larm.002_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm/L_Larm.001
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm/L_Larm.001/L_Larm.002
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm/L_Larm.001/L_Larm.002/L_Larm.002_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair1
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair1/Hair1.2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair1/Hair1.2/Hair1.2_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair2/Hair2.2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair2/Hair2.2/Hair2.2_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair3
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair3/Hair3.2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair3/Hair3.2/Hair3.2_end
+        weight: 1
+      - path: Armature/Root/Hip.012
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg/L_Lleg
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg/L_Lleg/L_Foot
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg/L_Lleg/L_Foot/L_Foot_end
+        weight: 1
+      - path: Armature/Root/Hip.016
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg/R_Lleg
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg/R_Lleg/R_Foot
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg/R_Lleg/R_Foot/R_Foot_end
+        weight: 1
+      - path: Body1
+        weight: 1
+      - path: Body2
+        weight: 1
+      - path: Body2.001
+        weight: 1
+      - path: Hair
+        weight: 1
+      - path: SkinL
+        weight: 1
+      - path: SkinMiddle
+        weight: 1
+      - path: SkinR
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|WalkCycle
+      takeName: Armature|WalkCycle
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/L_Armtarget
+        weight: 1
+      - path: Armature/L_Armtarget/L_Armtarget_end
+        weight: 1
+      - path: Armature/L_ElbowTarget
+        weight: 1
+      - path: Armature/L_ElbowTarget/L_ElbowTarget_end
+        weight: 1
+      - path: Armature/L_KneeTarget
+        weight: 1
+      - path: Armature/L_KneeTarget/L_KneeTarget_end
+        weight: 1
+      - path: Armature/L_LegTarget
+        weight: 1
+      - path: Armature/L_LegTarget/L_LegTarget_end
+        weight: 1
+      - path: Armature/R_ArmTarget
+        weight: 1
+      - path: Armature/R_ArmTarget/R_ArmTarget_end
+        weight: 1
+      - path: Armature/R_ElbowTarget
+        weight: 1
+      - path: Armature/R_ElbowTarget/R_ElbowTarget_end
+        weight: 1
+      - path: Armature/R_KneeTarget
+        weight: 1
+      - path: Armature/R_KneeTarget/R_KneeTarget_end
+        weight: 1
+      - path: Armature/R_LegTarget
+        weight: 1
+      - path: Armature/R_LegTarget/R_LegTarget_end
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Stomach
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Chest.001
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Chest.001/Chest.002
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Chest.001/Chest.002/Chest.002_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm/R_Larm.001
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm/R_Larm.001/R_Larm.002
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm/R_Larm.001/R_Larm.002/R_Larm.002_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm/L_Larm.001
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm/L_Larm.001/L_Larm.002
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm/L_Larm.001/L_Larm.002/L_Larm.002_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair1
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair1/Hair1.2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair1/Hair1.2/Hair1.2_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair2/Hair2.2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair2/Hair2.2/Hair2.2_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair3
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair3/Hair3.2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair3/Hair3.2/Hair3.2_end
+        weight: 1
+      - path: Armature/Root/Hip.012
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg/L_Lleg
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg/L_Lleg/L_Foot
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg/L_Lleg/L_Foot/L_Foot_end
+        weight: 1
+      - path: Armature/Root/Hip.016
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg/R_Lleg
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg/R_Lleg/R_Foot
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg/R_Lleg/R_Foot/R_Foot_end
+        weight: 1
+      - path: Body1
+        weight: 1
+      - path: Body2
+        weight: 1
+      - path: Body2.001
+        weight: 1
+      - path: Hair
+        weight: 1
+      - path: SkinL
+        weight: 1
+      - path: SkinMiddle
+        weight: 1
+      - path: SkinR
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|WalkCycle.001
+      takeName: Armature|WalkCycle.001
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/L_Armtarget
+        weight: 1
+      - path: Armature/L_Armtarget/L_Armtarget_end
+        weight: 1
+      - path: Armature/L_ElbowTarget
+        weight: 1
+      - path: Armature/L_ElbowTarget/L_ElbowTarget_end
+        weight: 1
+      - path: Armature/L_KneeTarget
+        weight: 1
+      - path: Armature/L_KneeTarget/L_KneeTarget_end
+        weight: 1
+      - path: Armature/L_LegTarget
+        weight: 1
+      - path: Armature/L_LegTarget/L_LegTarget_end
+        weight: 1
+      - path: Armature/R_ArmTarget
+        weight: 1
+      - path: Armature/R_ArmTarget/R_ArmTarget_end
+        weight: 1
+      - path: Armature/R_ElbowTarget
+        weight: 1
+      - path: Armature/R_ElbowTarget/R_ElbowTarget_end
+        weight: 1
+      - path: Armature/R_KneeTarget
+        weight: 1
+      - path: Armature/R_KneeTarget/R_KneeTarget_end
+        weight: 1
+      - path: Armature/R_LegTarget
+        weight: 1
+      - path: Armature/R_LegTarget/R_LegTarget_end
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Stomach
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Chest.001
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Chest.001/Chest.002
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Chest.001/Chest.002/Chest.002_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm/R_Larm.001
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm/R_Larm.001/R_Larm.002
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm/R_Larm.001/R_Larm.002/R_Larm.002_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm/L_Larm.001
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm/L_Larm.001/L_Larm.002
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm/L_Larm.001/L_Larm.002/L_Larm.002_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair1
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair1/Hair1.2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair1/Hair1.2/Hair1.2_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair2/Hair2.2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair2/Hair2.2/Hair2.2_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair3
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair3/Hair3.2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair3/Hair3.2/Hair3.2_end
+        weight: 1
+      - path: Armature/Root/Hip.012
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg/L_Lleg
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg/L_Lleg/L_Foot
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg/L_Lleg/L_Foot/L_Foot_end
+        weight: 1
+      - path: Armature/Root/Hip.016
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg/R_Lleg
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg/R_Lleg/R_Foot
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg/R_Lleg/R_Foot/R_Foot_end
+        weight: 1
+      - path: Body1
+        weight: 1
+      - path: Body2
+        weight: 1
+      - path: Body2.001
+        weight: 1
+      - path: Hair
+        weight: 1
+      - path: SkinL
+        weight: 1
+      - path: SkinMiddle
+        weight: 1
+      - path: SkinR
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|WalkCycle.002
+      takeName: Armature|WalkCycle.002
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/L_Armtarget
+        weight: 1
+      - path: Armature/L_Armtarget/L_Armtarget_end
+        weight: 1
+      - path: Armature/L_ElbowTarget
+        weight: 1
+      - path: Armature/L_ElbowTarget/L_ElbowTarget_end
+        weight: 1
+      - path: Armature/L_KneeTarget
+        weight: 1
+      - path: Armature/L_KneeTarget/L_KneeTarget_end
+        weight: 1
+      - path: Armature/L_LegTarget
+        weight: 1
+      - path: Armature/L_LegTarget/L_LegTarget_end
+        weight: 1
+      - path: Armature/R_ArmTarget
+        weight: 1
+      - path: Armature/R_ArmTarget/R_ArmTarget_end
+        weight: 1
+      - path: Armature/R_ElbowTarget
+        weight: 1
+      - path: Armature/R_ElbowTarget/R_ElbowTarget_end
+        weight: 1
+      - path: Armature/R_KneeTarget
+        weight: 1
+      - path: Armature/R_KneeTarget/R_KneeTarget_end
+        weight: 1
+      - path: Armature/R_LegTarget
+        weight: 1
+      - path: Armature/R_LegTarget/R_LegTarget_end
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Stomach
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Chest.001
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Chest.001/Chest.002
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Chest.001/Chest.002/Chest.002_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm/R_Larm.001
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm/R_Larm.001/R_Larm.002
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm/R_Larm.001/R_Larm.002/R_Larm.002_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm/L_Larm.001
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm/L_Larm.001/L_Larm.002
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm/L_Larm.001/L_Larm.002/L_Larm.002_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair1
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair1/Hair1.2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair1/Hair1.2/Hair1.2_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair2/Hair2.2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair2/Hair2.2/Hair2.2_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair3
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair3/Hair3.2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair3/Hair3.2/Hair3.2_end
+        weight: 1
+      - path: Armature/Root/Hip.012
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg/L_Lleg
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg/L_Lleg/L_Foot
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg/L_Lleg/L_Foot/L_Foot_end
+        weight: 1
+      - path: Armature/Root/Hip.016
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg/R_Lleg
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg/R_Lleg/R_Foot
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg/R_Lleg/R_Foot/R_Foot_end
+        weight: 1
+      - path: Body1
+        weight: 1
+      - path: Body2
+        weight: 1
+      - path: Body2.001
+        weight: 1
+      - path: Hair
+        weight: 1
+      - path: SkinL
+        weight: 1
+      - path: SkinMiddle
+        weight: 1
+      - path: SkinR
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|WalkCycle.003
+      takeName: Armature|WalkCycle.003
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/L_Armtarget
+        weight: 1
+      - path: Armature/L_Armtarget/L_Armtarget_end
+        weight: 1
+      - path: Armature/L_ElbowTarget
+        weight: 1
+      - path: Armature/L_ElbowTarget/L_ElbowTarget_end
+        weight: 1
+      - path: Armature/L_KneeTarget
+        weight: 1
+      - path: Armature/L_KneeTarget/L_KneeTarget_end
+        weight: 1
+      - path: Armature/L_LegTarget
+        weight: 1
+      - path: Armature/L_LegTarget/L_LegTarget_end
+        weight: 1
+      - path: Armature/R_ArmTarget
+        weight: 1
+      - path: Armature/R_ArmTarget/R_ArmTarget_end
+        weight: 1
+      - path: Armature/R_ElbowTarget
+        weight: 1
+      - path: Armature/R_ElbowTarget/R_ElbowTarget_end
+        weight: 1
+      - path: Armature/R_KneeTarget
+        weight: 1
+      - path: Armature/R_KneeTarget/R_KneeTarget_end
+        weight: 1
+      - path: Armature/R_LegTarget
+        weight: 1
+      - path: Armature/R_LegTarget/R_LegTarget_end
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Stomach
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Chest.001
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Chest.001/Chest.002
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Chest.001/Chest.002/Chest.002_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm/R_Larm.001
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm/R_Larm.001/R_Larm.002
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm/R_Larm.001/R_Larm.002/R_Larm.002_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm/L_Larm.001
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm/L_Larm.001/L_Larm.002
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm/L_Larm.001/L_Larm.002/L_Larm.002_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair1
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair1/Hair1.2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair1/Hair1.2/Hair1.2_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair2/Hair2.2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair2/Hair2.2/Hair2.2_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair3
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair3/Hair3.2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair3/Hair3.2/Hair3.2_end
+        weight: 1
+      - path: Armature/Root/Hip.012
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg/L_Lleg
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg/L_Lleg/L_Foot
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg/L_Lleg/L_Foot/L_Foot_end
+        weight: 1
+      - path: Armature/Root/Hip.016
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg/R_Lleg
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg/R_Lleg/R_Foot
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg/R_Lleg/R_Foot/R_Foot_end
+        weight: 1
+      - path: Body1
+        weight: 1
+      - path: Body2
+        weight: 1
+      - path: Body2.001
+        weight: 1
+      - path: Hair
+        weight: 1
+      - path: SkinL
+        weight: 1
+      - path: SkinMiddle
+        weight: 1
+      - path: SkinR
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|WalkCycle.004
+      takeName: Armature|WalkCycle.004
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/L_Armtarget
+        weight: 1
+      - path: Armature/L_Armtarget/L_Armtarget_end
+        weight: 1
+      - path: Armature/L_ElbowTarget
+        weight: 1
+      - path: Armature/L_ElbowTarget/L_ElbowTarget_end
+        weight: 1
+      - path: Armature/L_KneeTarget
+        weight: 1
+      - path: Armature/L_KneeTarget/L_KneeTarget_end
+        weight: 1
+      - path: Armature/L_LegTarget
+        weight: 1
+      - path: Armature/L_LegTarget/L_LegTarget_end
+        weight: 1
+      - path: Armature/R_ArmTarget
+        weight: 1
+      - path: Armature/R_ArmTarget/R_ArmTarget_end
+        weight: 1
+      - path: Armature/R_ElbowTarget
+        weight: 1
+      - path: Armature/R_ElbowTarget/R_ElbowTarget_end
+        weight: 1
+      - path: Armature/R_KneeTarget
+        weight: 1
+      - path: Armature/R_KneeTarget/R_KneeTarget_end
+        weight: 1
+      - path: Armature/R_LegTarget
+        weight: 1
+      - path: Armature/R_LegTarget/R_LegTarget_end
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Stomach
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Chest.001
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Chest.001/Chest.002
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Chest.001/Chest.002/Chest.002_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm/R_Larm.001
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm/R_Larm.001/R_Larm.002
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Hip.009/R_Uarm/R_Larm/R_Larm.001/R_Larm.002/R_Larm.002_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm/L_Larm.001
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm/L_Larm.001/L_Larm.002
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/LShoul/L_Uarm/L_Larm/L_Larm.001/L_Larm.002/L_Larm.002_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair1
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair1/Hair1.2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair1/Hair1.2/Hair1.2_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair2/Hair2.2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair2/Hair2.2/Hair2.2_end
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair3
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair3/Hair3.2
+        weight: 1
+      - path: Armature/Root/Hip/Stomach/Chest/Neck1/Neck2/Head/Hair3/Hair3.2/Hair3.2_end
+        weight: 1
+      - path: Armature/Root/Hip.012
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg/L_Lleg
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg/L_Lleg/L_Foot
+        weight: 1
+      - path: Armature/Root/Hip.012/L_ULeg/L_Lleg/L_Foot/L_Foot_end
+        weight: 1
+      - path: Armature/Root/Hip.016
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg/R_Lleg
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg/R_Lleg/R_Foot
+        weight: 1
+      - path: Armature/Root/Hip.016/R_Uleg/R_Lleg/R_Foot/R_Foot_end
+        weight: 1
+      - path: Body1
+        weight: 1
+      - path: Body2
+        weight: 1
+      - path: Body2.001
+        weight: 1
+      - path: Hair
+        weight: 1
+      - path: SkinL
+        weight: 1
+      - path: SkinMiddle
+        weight: 1
+      - path: SkinR
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: Armature
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

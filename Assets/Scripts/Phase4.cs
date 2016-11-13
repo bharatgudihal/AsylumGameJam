@@ -35,6 +35,10 @@ public class Phase4 : MonoBehaviour
 		EventManager.CallTextWriter (dialogue);
 	}
 
+	public void DisablePhase(){
+		step = 0;
+	}
+
 
 	// Update is called once per frame
 	public void Update () 
@@ -61,6 +65,8 @@ public class Phase4 : MonoBehaviour
 			{
 				StartCoroutine (callText ("Good", 0.1f, 10));
 				StartCoroutine (Shinning (10.0f));
+				switch_U.isTrigger = false;
+				EventManager.CallPhaseChanger ();
 			}
 		}
 
@@ -77,7 +83,10 @@ public class Phase4 : MonoBehaviour
 			light.intensity = amplitude;
 
 			yield return 0;
+
 		}
+
+
 	}
 		
 	IEnumerator callText(string text, float delay, int i_step)

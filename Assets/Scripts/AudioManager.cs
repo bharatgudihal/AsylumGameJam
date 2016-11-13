@@ -46,10 +46,12 @@ public class AudioManager : MonoBehaviour {
 
 	public void StopMusic(){
 		foreach (AudioSource source in audioSources) {
+			if(source)
 			source.Stop ();
 		}
 
 		foreach (AudioSource source in usedAudioSources) {
+			if(source)
 			source.Stop ();
 		}
 	}
