@@ -19,6 +19,7 @@ public class Phase1 : MonoBehaviour {
 	//the audio clips for this phase
 	public AudioClip[] phase1AudioClips;
 	public AudioClip[] phase1SfxClips;
+	bool stopcoroutines;
 
 	public void Awake(){
 	}
@@ -51,7 +52,7 @@ public class Phase1 : MonoBehaviour {
 				Color currentColor = Color.Lerp (RenderSettings.fogColor, highestSurface, changeSpeed);
 				RenderSettings.fogColor = currentColor;
 				//EventManager.CallRockMovement (0);
-				if (timer > surfaceWaitTime) {					
+				if (timer > surfaceWaitTime && !stopcoroutines) {					
 					StartCoroutine (WaitForOneSecond ());
 					timer = 0.0f;
 					upperLimitReached = true;
@@ -70,17 +71,18 @@ public class Phase1 : MonoBehaviour {
 	}
 
 	IEnumerator  WaitForOneSecond(){
-
+		stopcoroutines = true;
 		//Reached the top
 		AudioManager.instance.StopMusic();
-		AudioManager.instance.PlayOneShotSFX (phase1SfxClips [0]);
+		AudioManager.instance.PlayMusic(phase1SfxClips [0],false);
 
 
 
 		//Trigger the audio to stop
 		yield return new WaitForSeconds (5.0f);
 		EventManager.CameraShaker (0.03f, 0.0005f);
-		AudioManager.instance.PlayMusic (AudioManager.instance.generalSFX[2],true);
+		AudioManager.instance.PlayMusic (AudioManager.instance.generalSFX[2],false);
+		AudioManager.instance.PlayMusic (AudioManager.instance.generalSFX[3],true);
 		yield return new WaitForSeconds (3.0f);
 		EventManager.CameraShaker (0.03f, 0.00009f);
 		EventManager.CallRockMovement (1);
@@ -98,7 +100,7 @@ public class Phase1 : MonoBehaviour {
 		EventManager.CameraShaker (0.03f, 0.00009f);
 		startDescent = true;
 		AudioManager.instance.StopMusic();
-
+		AudioManager.instance.PlayMusic (AudioManager.instance.generalSFX[3],true);
 		AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [0],true);
 		AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [1],true);
 	}

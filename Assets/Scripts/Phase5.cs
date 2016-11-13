@@ -42,7 +42,6 @@ public class Phase5: MonoBehaviour {
 			RenderSettings.fogColor = currentColor;
 			if (timer > descentTime) {
 				timer = 0f;
-				EventManager.CallRockMovement (1);
 				hallucinate = true;
 				state++;
 			}
@@ -107,6 +106,7 @@ public class Phase5: MonoBehaviour {
 		EventManager.CameraShaker (0.05f, 0.0005f);
 		yield return new WaitForSeconds (6.0f);
 		AudioManager.instance.StopMusic();
+		EventManager.CallRockMovement (1);
 		StartCoroutine (Quiet ());
 	}
 

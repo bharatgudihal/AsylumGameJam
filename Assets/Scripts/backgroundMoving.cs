@@ -69,7 +69,7 @@ public class backgroundMoving : MonoBehaviour
 			velocity = 0;
 			break;
 		case 3:
-			velocity = 15;
+			velocity = 20;
 			break;
 		}
 		isMovingDown = true;

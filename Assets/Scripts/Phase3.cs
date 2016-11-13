@@ -33,6 +33,7 @@ public class Phase3: MonoBehaviour {
 		dialogue.Add (new TextElement("I'll focus on getting you out",0.1f,4f));
 		EventManager.CallTextWriter (dialogue);
 		state = 1;
+		AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [3], true);
 	}
 
 	public void DisablePhase(){
@@ -83,7 +84,7 @@ public class Phase3: MonoBehaviour {
 	IEnumerator  LightShake(){
 		
 		//Reached the top
-		AudioManager.instance.StopMusic();
+		AudioManager.instance.PlayOneShotSFX(AudioManager.instance.generalSFX[4]);
 		//AudioManager.instance.PlayOneShotSFX (phase1SfxClips [0]);
 		EventManager.CameraShaker (0.03f, 0.0005f);
 
