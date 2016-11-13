@@ -72,7 +72,6 @@ public class CustomGameManager : MonoBehaviour {
 
 		phase++;
 
-		Debug.Log ("Current phase " + phase);
 
 		if (phase == 1) 
 		{

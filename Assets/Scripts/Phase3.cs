@@ -33,6 +33,7 @@ public class Phase3: MonoBehaviour {
 		dialogue.Add (new TextElement("I'll focus on getting you out",0.1f,4f));
 		EventManager.CallTextWriter (dialogue);
 		state = 1;
+		AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [2], true);
 		AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [3], true);
 	}
 

@@ -25,6 +25,9 @@ public class EventManager : MonoBehaviour {
 	public delegate void phase1LeverPulled ();
 	public static event phase1LeverPulled leverPulled;
 
+	public delegate void endGame ();
+	public static event endGame GameEnder;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -63,5 +66,9 @@ public class EventManager : MonoBehaviour {
 
 	public static void CallLeverPulled(){
 		leverPulled ();
+	}
+
+	public static void CallGameEnder(){
+		GameEnder ();
 	}
 }

@@ -12,6 +12,8 @@ public class backgroundMoving : MonoBehaviour
 	int currentLevel;
 	public List<GameObject> levels;
 	bool levelChangeRequested;
+	bool end;
+	bool floorSpawned;
 
 	void Awake()
 	{
@@ -48,7 +50,9 @@ public class backgroundMoving : MonoBehaviour
 					levelChangeRequested = false;
 					changeLevel ();
 				}
+
 				transform.localPosition = new Vector3 (gameObject.transform.localPosition.x, Min_Position_Y, gameObject.transform.localPosition.z);
+
 			}
 		} else {
 			transform.Translate (velocity * Vector3.down * Time.deltaTime);
@@ -91,4 +95,5 @@ public class backgroundMoving : MonoBehaviour
 	public void triggerLevelChange(){
 		levelChangeRequested = true;
 	}
+		
 }

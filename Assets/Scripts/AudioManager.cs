@@ -64,11 +64,11 @@ public class AudioManager : MonoBehaviour {
 	}
 
 	void Update(){
-
 		foreach (AudioSource source in usedAudioSources) {
-			if (!source.isPlaying) {
+			if (source && !source.isPlaying) {
 				usedAudioSources.Remove (source);
 				audioSources.Add (source);
+				break;
 			}
 		}
 

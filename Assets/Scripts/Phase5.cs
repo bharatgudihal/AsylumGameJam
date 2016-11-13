@@ -21,7 +21,7 @@ public class Phase5: MonoBehaviour {
 
     // Use this for initialization
     public void Start () {
-
+		
 	}
 
 	public void EnablePhase(){
@@ -106,7 +106,7 @@ public class Phase5: MonoBehaviour {
 		EventManager.CameraShaker (0.05f, 0.0005f);
 		yield return new WaitForSeconds (6.0f);
 		AudioManager.instance.StopMusic();
-		EventManager.CallRockMovement (1);
+		EventManager.CallRockMovement(1);
 		StartCoroutine (Quiet ());
 	}
 
@@ -135,8 +135,8 @@ public class Phase5: MonoBehaviour {
 			yield return null;
 		}
 		interpolator = 1.0f;
-		UltraGhoul.GetComponent<MoveGhoul>().enabled = false;
-		UltraGhoul.GetComponent<Animator>().enabled = false;
+		UltraGhoul.SetActive(false);
+		Application.Quit ();
 		//Game Ends
 	}
 }
