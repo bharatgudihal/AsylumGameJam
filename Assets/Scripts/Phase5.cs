@@ -92,5 +92,11 @@ public class Phase5: MonoBehaviour {
 		yield return new WaitForSeconds (4.0f);
 	}
 
+	IEnumerator FadeInTheMonster(){
+
+
+
+	}
+
 
 }
