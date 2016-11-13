@@ -2531,6 +2531,9 @@ GameObject:
   - 4: {fileID: 1096325068}
   - 33: {fileID: 1096325070}
   - 23: {fileID: 1096325069}
+  - 54: {fileID: 1096325072}
+  - 135: {fileID: 1096325071}
+  - 114: {fileID: 1096325073}
   m_Layer: 0
   m_Name: flip_switch1
   m_TagString: Untagged
@@ -2589,6 +2592,45 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1096325067}
   m_Mesh: {fileID: 4300016, guid: 8e592517f56794d4c81eb55dc88f3973, type: 3}
+--- !u!135 &1096325071
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1096325067}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.04
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1096325072
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1096325067}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1096325073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1096325067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af2ba31d0afa1704fa733ba49c9b772a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTrigger: 0
 --- !u!1 &1104093372
 GameObject:
   m_ObjectHideFlags: 0
@@ -3619,6 +3661,7 @@ GameObject:
   - 114: {fileID: 1498923071}
   - 114: {fileID: 1498923072}
   - 114: {fileID: 1498923073}
+  - 114: {fileID: 1498923074}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -3701,8 +3744,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BathySphere: {fileID: 160477655}
+  lever_Object: {fileID: 1809248678}
   targetColor: {r: 0, g: 0.015686275, b: 0.023529412, a: 1}
   colorChangeSpeed: 0.001
+--- !u!114 &1498923074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1498923068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a5cdc6f5457b9e42a13856d2c669dba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switch_Object_U: {fileID: 1096325067}
+  step: 5
+  duration: 1
+  lightObject: {fileID: 268299426}
 --- !u!1 &1515030370
 GameObject:
   m_ObjectHideFlags: 0
@@ -4364,6 +4423,7 @@ GameObject:
   - 54: {fileID: 1809248682}
   - 135: {fileID: 1809248681}
   - 114: {fileID: 1809248680}
+  - 114: {fileID: 1809248684}
   m_Layer: 0
   m_Name: lever2
   m_TagString: Untagged
@@ -4409,8 +4469,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.013
+  m_Center: {x: 0, y: 0.01, z: 0}
 --- !u!54 &1809248682
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4439,6 +4499,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MAX_Angle: 135
   MIN_Angle: 45
+  isTrigger: 0
+--- !u!114 &1809248684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1809248678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af2ba31d0afa1704fa733ba49c9b772a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   isTrigger: 0
 --- !u!1 &1815608398
 GameObject:
