@@ -31,8 +31,12 @@ public class Phase4 : MonoBehaviour
 	{
 		dialogue.Add (new TextElement("", 0.1f, 2.0f));
 		dialogue.Add (new TextElement("I have a solution", 0.1f, 4.0f));
-		dialogue.Add (new TextElement("Flip the switches to your left", 0.1f, 4.0f));
+		dialogue.Add (new TextElement("Press one of the buttons", 0.1f, 4.0f));
 		EventManager.CallTextWriter (dialogue);
+	}
+
+	public void DisablePhase(){
+		step = 0;
 	}
 
 
@@ -49,9 +53,9 @@ public class Phase4 : MonoBehaviour
 		if (step == 8) 
 		{
 			if (switch_U.isTrigger == true) 
-			{
+			{				
 				StartCoroutine (Shinning (1.0f));
-				StartCoroutine (callText ("Again!!!", 0.1f, 9));
+				StartCoroutine (callText ("Again", 0.1f, 9));
 			}
 		}
 
@@ -61,6 +65,8 @@ public class Phase4 : MonoBehaviour
 			{
 				StartCoroutine (callText ("Good", 0.1f, 10));
 				StartCoroutine (Shinning (10.0f));
+				switch_U.isTrigger = false;
+				EventManager.CallPhaseChanger ();
 			}
 		}
 
@@ -77,7 +83,10 @@ public class Phase4 : MonoBehaviour
 			light.intensity = amplitude;
 
 			yield return 0;
+
 		}
+
+
 	}
 		
 	IEnumerator callText(string text, float delay, int i_step)

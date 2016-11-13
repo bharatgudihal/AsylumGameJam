@@ -22,6 +22,9 @@ public class EventManager : MonoBehaviour {
 	public delegate void changeLevels ();
 	public static event changeLevels levelChanger;
 
+	public delegate void phase1LeverPulled ();
+	public static event phase1LeverPulled leverPulled;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -56,5 +59,9 @@ public class EventManager : MonoBehaviour {
 
 	public static void CallLevelChanger(){
 		levelChanger ();
+	}
+
+	public static void CallLeverPulled(){
+		leverPulled ();
 	}
 }

@@ -7,18 +7,22 @@ public class CustomGameManager : MonoBehaviour {
 	Phase2 phase2;
 	Phase3 phase3;
 	Phase4 phase4;
+	Phase5 phase5;
 
 	void Awake(){
+		
 		EventManager.phaseChanger += ChangePhase;
 	}
 
 	// Use this for initialization
 	void Start () {
-        phase = 0;
+		phase = 0;
 		phase1 = this.gameObject.GetComponent<Phase1>();
 		phase2 = this.gameObject.GetComponent<Phase2>();
 		phase3 = this.gameObject.GetComponent<Phase3>();
 		phase4 = this.gameObject.GetComponent<Phase4>();
+		phase5 = this.gameObject.GetComponent<Phase5>();
+
     }
 	
 	// Update is called once per frame
@@ -40,6 +44,10 @@ public class CustomGameManager : MonoBehaviour {
 		{
 			phase4.Update ();
 		}
+		else if(phase == 4)
+		{
+			phase5.Update ();
+		}
 	}
 
 	void ChangePhase()
@@ -56,6 +64,11 @@ public class CustomGameManager : MonoBehaviour {
 		{
 			phase3.DisablePhase ();
 		}
+		else if(phase == 3)
+		{
+			phase4.DisablePhase ();
+		}
+
 
 		phase++;
 
@@ -76,6 +89,14 @@ public class CustomGameManager : MonoBehaviour {
 		{
 			phase4.EnablePhase ();
 		}
+
+		if (phase == 4) 
+		{
+			phase5.EnablePhase ();
+		}
+
+
+
 
 	}
 }

@@ -6,7 +6,7 @@ public class backgroundMoving : MonoBehaviour
 {
 	float Min_Position_Y = 0.0f;
 	float Max_Position_Y = 0.0f;
-    public float velocity = 1.0f;
+    public float velocity;
 	private bool isMovingDown;
 	public GameObject mesh;
 	int currentLevel;
@@ -22,8 +22,8 @@ public class backgroundMoving : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {		
-		Max_Position_Y = mesh.GetComponent<MeshRenderer> ().bounds.size.y - mesh.GetComponent<MeshRenderer> ().bounds.size.y*.1f;
-		Min_Position_Y = -Max_Position_Y;
+		Max_Position_Y = 205;
+		Min_Position_Y = -195;
 		transform.localPosition = new Vector3(gameObject.transform.localPosition.x, gameObject.transform.localPosition.y, gameObject.transform.localPosition.z);
 		isMovingDown = false;
 		currentLevel = 1;
@@ -36,6 +36,14 @@ public class backgroundMoving : MonoBehaviour
 			transform.Translate (velocity * Vector3.up * Time.deltaTime);
 
 			if (transform.localPosition.y >= Max_Position_Y) {
+				if (currentLevel == 2) {					
+					Transform childTransform = transform.Find ("Layer2/WallLevel4/Transitions");
+					childTransform.gameObject.SetActive (false);
+				}
+				if (currentLevel == 3) {					
+					Transform childTransform = transform.Find ("Layer3/WallLevel4/Transitions");
+					childTransform.gameObject.SetActive (false);
+				}
 				if (levelChangeRequested) {
 					levelChangeRequested = false;
 					changeLevel ();
@@ -61,7 +69,7 @@ public class backgroundMoving : MonoBehaviour
 			velocity = 0;
 			break;
 		case 3:
-			velocity = 3;
+			velocity = 15;
 			break;
 		}
 		isMovingDown = true;
