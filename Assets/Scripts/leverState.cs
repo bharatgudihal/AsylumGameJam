@@ -21,6 +21,7 @@ public class leverState : MonoBehaviour
 	{
 		if (leverclass.isTrigger == true) 
 		{
+			AudioManager.instance.PlayOneShotSFX (AudioManager.instance.generalSFX[1]);
 			EventManager.CalldisplayStrings ("That should put you back on course", 0.1f, 0.5f);
 			leverclass.isTrigger = false;
 		}

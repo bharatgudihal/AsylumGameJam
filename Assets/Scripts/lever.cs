@@ -70,6 +70,7 @@ public class lever : MonoBehaviour
 			if (this.transform.rotation.eulerAngles.x > 80) 
 			{
 				isTrigger = true;
+
 			}
 
         }
