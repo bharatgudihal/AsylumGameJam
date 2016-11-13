@@ -47,7 +47,11 @@ public class Phase4 : MonoBehaviour
 		{
 			if (switch_U.isTrigger == true) 
 			{
+				StartCoroutine (Shinning (1.0f));
 				StartCoroutine (callText ("Again", 0.1f, 8));
+				AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [4], true);
+				AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [5], true);
+				AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [6], true);
 			}
 		}
 		if (step == 8) 

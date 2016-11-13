@@ -55,11 +55,19 @@ public class AudioManager : MonoBehaviour {
 			source.Stop ();
 		}
 	}
+	public void StopMusic(AudioClip clip){
+		foreach (AudioSource source in usedAudioSources) {
+			if (source.clip.name.Equals (clip.name)) {
+				source.Stop ();
+			}
+		}
+	}
 
 	void Update(){
 
 		foreach (AudioSource source in usedAudioSources) {
 			if (!source.isPlaying) {
+				usedAudioSources.Remove (source);
 				audioSources.Add (source);
 			}
 		}
