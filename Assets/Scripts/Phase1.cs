@@ -7,10 +7,9 @@ public class Phase1 : MonoBehaviour {
     public float upperLimit;
 	public float lowerLimit;
 	private float timer = 0.0f;
-	private float surfaceWaitTime = 28.0f;
+	private float surfaceWaitTime = 20.0f;
 	private float phase1WaitTime = 60.0f;
 	public float changeSpeed;
-    public GameObject BathySphere;
 	public Color highestSurface;
 	public Color phase1Color;
 	public bool upperLimitReached;
@@ -50,7 +49,8 @@ public class Phase1 : MonoBehaviour {
 			if (!upperLimitReached) {
 				Color currentColor = Color.Lerp (RenderSettings.fogColor, highestSurface, changeSpeed);
 				RenderSettings.fogColor = currentColor;
-				if (timer > surfaceWaitTime) {
+				//EventManager.CallRockMovement (0);
+				if (timer > surfaceWaitTime) {					
 					StartCoroutine (WaitForOneSecond ());
 					timer = 0.0f;
 					upperLimitReached = true;
@@ -75,19 +75,23 @@ public class Phase1 : MonoBehaviour {
 
 		//Crane stop
 		AudioManager.instance.PlayOneShotSFX (phase1SfxClips [0]);
+<<<<<<< HEAD
 
 		//Shake
 		AudioManager.instance.PlayMusic(AudioManager.instance.generalSFX[2],true);
 
+=======
+>>>>>>> refs/remotes/origin/dev
 		//Trigger the audio to stop
-		yield return new WaitForSeconds (1.0f);
+		yield return new WaitForSeconds (5.0f);
 		EventManager.CameraShaker (0.03f, 0.0005f);
-		startDescent = true;
-		yield return new WaitForSeconds (1.0f);
+		yield return new WaitForSeconds (3.0f);
 		EventManager.CameraShaker (0.03f, 0.00009f);
+		EventManager.CallRockMovement (1);
 		timer = 0.0f;
-		yield return new WaitForSeconds (2.0f);
+		yield return new WaitForSeconds (5.0f);
 		EventManager.CameraShaker (0.03f, 0.00009f);
+		EventManager.CallRockMovement (3);
 		yield return new WaitForSeconds (3.0f);
 		EventManager.CameraShaker (0.03f, 0.00009f);
 		yield return new WaitForSeconds (3.0f);
@@ -96,6 +100,7 @@ public class Phase1 : MonoBehaviour {
 		EventManager.CameraShaker (0.03f, 0.00009f);
 		yield return new WaitForSeconds (3.0f);
 		EventManager.CameraShaker (0.03f, 0.00009f);
+<<<<<<< HEAD
 
 		//Reached the top
 		AudioManager.instance.StopMusic();
@@ -103,6 +108,9 @@ public class Phase1 : MonoBehaviour {
 		AudioManager.instance.PlayMusic(AudioManager.instance.generalEnvironment[0],true);
 		AudioManager.instance.PlayMusic(AudioManager.instance.generalEnvironment[1],true);
 
+=======
+		startDescent = true;
+>>>>>>> refs/remotes/origin/dev
 	}
 
 	public void DisablePhase(){
