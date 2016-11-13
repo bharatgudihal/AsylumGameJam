@@ -39,6 +39,7 @@ public class Phase2 : MonoBehaviour {
 				timer = 0f;
 				state++;
 				BathySphere.GetComponent<Animator> ().enabled = true;
+				StartCoroutine (TransitionToPhase3 ());
 			}
 			break;
 //		case 2:
@@ -52,4 +53,12 @@ public class Phase2 : MonoBehaviour {
 			break;
 		}
 	}
+
+	IEnumerator TransitionToPhase3(){
+		yield return new WaitForSeconds (5.0f);
+		EventManager.CallPhaseChanger ();
+
+	}
+
+
 }

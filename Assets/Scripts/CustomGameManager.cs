@@ -33,6 +33,11 @@ public class CustomGameManager : MonoBehaviour {
 	void ChangePhase(){
 		if (phase == 0) {
 			phase1.DisablePhase ();
+		} else if (phase == 1) {
+			phase2.DisablePhase ();
+		}else if(phase ==2)
+		{
+			phase3.DisablePhase ();
 		}
 		phase++;
 		Debug.Log ("Current phase " + phase);

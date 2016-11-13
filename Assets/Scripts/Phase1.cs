@@ -21,6 +21,11 @@ public class Phase1 : MonoBehaviour {
 	public AudioClip[] phase1AudioClips;
 	public AudioClip[] phase1SfxClips;
 
+
+
+
+
+
     // Use this for initialization
     public void Start () {
 		
@@ -72,16 +77,7 @@ public class Phase1 : MonoBehaviour {
 
 		//Reached the top
 		AudioManager.instance.StopMusic();
-
-		//Crane stop
 		AudioManager.instance.PlayOneShotSFX (phase1SfxClips [0]);
-<<<<<<< HEAD
-
-		//Shake
-		AudioManager.instance.PlayMusic(AudioManager.instance.generalSFX[2],true);
-
-=======
->>>>>>> refs/remotes/origin/dev
 		//Trigger the audio to stop
 		yield return new WaitForSeconds (5.0f);
 		EventManager.CameraShaker (0.03f, 0.0005f);
@@ -100,17 +96,7 @@ public class Phase1 : MonoBehaviour {
 		EventManager.CameraShaker (0.03f, 0.00009f);
 		yield return new WaitForSeconds (3.0f);
 		EventManager.CameraShaker (0.03f, 0.00009f);
-<<<<<<< HEAD
-
-		//Reached the top
-		AudioManager.instance.StopMusic();
-		//Shake
-		AudioManager.instance.PlayMusic(AudioManager.instance.generalEnvironment[0],true);
-		AudioManager.instance.PlayMusic(AudioManager.instance.generalEnvironment[1],true);
-
-=======
 		startDescent = true;
->>>>>>> refs/remotes/origin/dev
 	}
 
 	public void DisablePhase(){
