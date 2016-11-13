@@ -27,6 +27,7 @@ public class TextElement{
 		while (index < this.GetText().Length) {
 			uiText.text += this.GetText() [index];
 			index++;
+			AudioManager.instance.PlayOneShotSFX (AudioManager.instance.generalSFX[0]);
 			yield return new WaitForSeconds (this.GetDelay());
 		}
 
