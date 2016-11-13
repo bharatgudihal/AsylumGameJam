@@ -18,6 +18,7 @@ public class Phase4 : MonoBehaviour
 	public GameObject lightObject;
 	Light cabinLight;
 	public List<SmallWaterLeakEffect> waterLeakEffects;
+	public AudioSource backgroundMusic;
 
 	// Use this for initialization
 	public void Start () 
@@ -38,6 +39,9 @@ public class Phase4 : MonoBehaviour
 		dialogue.Add (new TextElement("Press one of the buttons", 0.1f, 4.0f));
 		StartCoroutine (timeDelay(14.0f));
 		EventManager.CallTextWriter (dialogue);
+		backgroundMusic.clip = AudioManager.instance.generalEnvironment [11];
+		backgroundMusic.loop = true;
+		backgroundMusic.Play ();
 	}
 
 	public void DisablePhase(){

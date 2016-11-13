@@ -16,7 +16,7 @@ public class Phase3: MonoBehaviour {
 	int state = 0;
 	public List<SteamEffect> steamEffects;
 	public BubblesEffect bubbles;
-
+	public AudioSource backgroundMusic;
 
     // Use this for initialization
     public void Start () {
@@ -36,10 +36,14 @@ public class Phase3: MonoBehaviour {
 		AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [2], true);
 		AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [3], true);
 		bubbles.Disable ();
+		backgroundMusic.clip = AudioManager.instance.generalEnvironment[10];
+		backgroundMusic.loop = true;
+		backgroundMusic.Play ();
 	}
 
 	public void DisablePhase(){
 		state = 0;
+		backgroundMusic.Stop ();
 	}
 
 

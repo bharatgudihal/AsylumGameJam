@@ -20,7 +20,7 @@ public class Phase1 : MonoBehaviour {
 	public AudioClip[] phase1AudioClips;
 	public AudioClip[] phase1SfxClips;
 	bool stopcoroutines;
-
+	public AudioSource backgroundMusic;
 
 	public GameObject Lever;
 	clickButton button;
@@ -48,6 +48,9 @@ public class Phase1 : MonoBehaviour {
 		dialogue.Add (new TextElement("We can fix this",0.1f,4f));
 		dialogue.Add (new TextElement("Pull that lever to your right",0.1f,4f));
 		EventManager.CallTextWriter (dialogue);
+		backgroundMusic.clip = AudioManager.instance.generalEnvironment [7];
+		backgroundMusic.loop = true;
+		backgroundMusic.Play ();
 	}
 	
 	// Update is called once per frame
@@ -69,7 +72,7 @@ public class Phase1 : MonoBehaviour {
 				}
 			}
 			if (startDescent) 
-			{
+			{				
 				Color currentColor = Color.Lerp (RenderSettings.fogColor, phase1Color, changeSpeed);
 				RenderSettings.fogColor = currentColor;
 
@@ -119,10 +122,14 @@ public class Phase1 : MonoBehaviour {
 		yield return new WaitForSeconds (3.0f);
 		EventManager.CameraShaker (0.03f, 0.00009f);
 		EventManager.CallRockMovement (1);
+		backgroundMusic.Stop ();
 		timer = 0.0f;
 		yield return new WaitForSeconds (5.0f);
 		EventManager.CameraShaker (0.03f, 0.00009f);
 		EventManager.CallRockMovement (3);
+		backgroundMusic.clip = AudioManager.instance.generalEnvironment[8];
+		backgroundMusic.loop = true;
+		backgroundMusic.Play ();
 		yield return new WaitForSeconds (3.0f);
 		EventManager.CameraShaker (0.03f, 0.00009f);
 		yield return new WaitForSeconds (3.0f);

@@ -17,7 +17,9 @@ public class Phase5: MonoBehaviour {
 	public float colorChangeSpeed;
 	int state = 0;
 	bool heavyShake = true;
-
+	public AudioClip slowDownClip;
+	public AudioClip monsterClip;
+	public AudioSource backgroundMusic;
 
     // Use this for initialization
     public void Start () {
@@ -50,6 +52,7 @@ public class Phase5: MonoBehaviour {
 		case 2:
 			//Read the player input
 			if (hallucinate) {
+				AudioManager.instance.PlayMusic (AudioManager.instance.generalSFX [3], true);
 				StartCoroutine (Hallucinations ());
 				hallucinate = false;
 			}
@@ -61,15 +64,11 @@ public class Phase5: MonoBehaviour {
 				FadeInTheMonster();
 
 			} else {
-
 				if (heavyShake) {
-
 					heavyShake = false;
 					state++;
 				}
-
 			}
-
 			break;
 
 
@@ -96,16 +95,14 @@ public class Phase5: MonoBehaviour {
 	IEnumerator  HeavyShake(){
 
 		//Reached the top
-		AudioManager.instance.StopMusic();
+
 		//AudioManager.instance.PlayOneShotSFX (phase1SfxClips [0]);
 
 		//Shake
-		AudioManager.instance.PlayMusic(AudioManager.instance.generalSFX[2],true);
 		EventManager.CameraShaker (0.04f, 0.0005f);
 		yield return new WaitForSeconds (2.0f);
 		EventManager.CameraShaker (0.05f, 0.0005f);
 		yield return new WaitForSeconds (6.0f);
-		AudioManager.instance.StopMusic();
 		EventManager.CallFloorMover ();
 		StartCoroutine (Quiet ());
 	}
@@ -114,8 +111,17 @@ public class Phase5: MonoBehaviour {
 
 
 	IEnumerator Quiet(){
-
+		backgroundMusic.Stop ();
+		AudioManager.instance.PlayMusic(slowDownClip,false);
+		AudioManager.instance.PlayMusic (AudioManager.instance.generalSFX[2],false);
+		EventManager.CameraShaker (0.1f, 0.0005f);
+		//Trigger the audio to stop
+		yield return new WaitForSeconds (5.0f);
+		AudioManager.instance.StopMusic ();
 		AudioManager.instance.PlayMusic(AudioManager.instance.generalEnvironment[1],true);
+		backgroundMusic.clip = monsterClip;
+		backgroundMusic.loop = false;
+		backgroundMusic.Play ();
 		yield return new WaitForSeconds (4.0f);
 		state++;
 
@@ -130,13 +136,13 @@ public class Phase5: MonoBehaviour {
 
 		float interpolator = 0.01f;
 
-		while(interpolator < 1.0f){
+		while(sprite.color.a != 1.0f){
 			sprite.color = new Color(sprite.color.r,sprite.color.g, sprite.color.b,Mathf.Lerp (sprite.color.a, 1.0f, interpolator));
 			yield return null;
 		}
 		interpolator = 1.0f;
 		UltraGhoul.SetActive(false);
-		Application.Quit ();
 		//Game Ends
+
 	}
 }

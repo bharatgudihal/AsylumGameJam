@@ -13,11 +13,13 @@ public class Phase2 : MonoBehaviour {
 	public float positionChangeSpeed;
 	public float finalPosition;
 	int state = 0;
+	public AudioSource backgroundMusic;
 
     // Use this for initialization
     public void Start () {
 		dialogue = new List<TextElement> ();
 		//EventManager.CallTextWriter (dialogue);
+
 	}
 
 	public void EnablePhase(){
@@ -27,6 +29,7 @@ public class Phase2 : MonoBehaviour {
 	public void DisablePhase(){
 		state = 0;
 		AudioManager.instance.StopMusic (AudioManager.instance.generalSFX [3]);
+		backgroundMusic.Stop ();
 	}
 	
 	// Update is called once per frame
