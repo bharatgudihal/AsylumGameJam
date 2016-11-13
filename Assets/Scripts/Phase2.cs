@@ -42,13 +42,6 @@ public class Phase2 : MonoBehaviour {
 				StartCoroutine (TransitionToPhase3 ());
 			}
 			break;
-//		case 2:
-//			float currentPosition = Mathf.Lerp (BathySphere.transform.position.y, finalPosition, positionChangeSpeed);
-//			BathySphere.transform.position = new Vector3 (BathySphere.transform.position.x, currentPosition, BathySphere.transform.position.z);
-//			if (currentPosition <= finalPosition + 0.1) {
-//				state++;
-//			}
-//			break;
 		default:
 			break;
 		}
