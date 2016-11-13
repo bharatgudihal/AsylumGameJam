@@ -38,17 +38,16 @@ public class Phase2 : MonoBehaviour {
 			if (timer > descentTime) {
 				timer = 0f;
 				state++;
-			}
-			break;
-		case 2:
-			float currentPosition = Mathf.Lerp (BathySphere.transform.position.y, finalPosition, positionChangeSpeed);
-			BathySphere.transform.position = new Vector3 (BathySphere.transform.position.x, currentPosition, BathySphere.transform.position.z);
-			if (currentPosition <= finalPosition + 0.1) {
-				state++;
-				EventManager.CallRockMovement ();
 				BathySphere.GetComponent<Animator> ().enabled = true;
 			}
 			break;
+//		case 2:
+//			float currentPosition = Mathf.Lerp (BathySphere.transform.position.y, finalPosition, positionChangeSpeed);
+//			BathySphere.transform.position = new Vector3 (BathySphere.transform.position.x, currentPosition, BathySphere.transform.position.z);
+//			if (currentPosition <= finalPosition + 0.1) {
+//				state++;
+//			}
+//			break;
 		default:
 			break;
 		}
