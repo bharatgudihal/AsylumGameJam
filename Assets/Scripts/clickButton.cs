@@ -3,7 +3,7 @@ using System.Collections;
 
 public class clickButton : MonoBehaviour
 {
-
+	public bool isTrigger = false;
 	// Use this for initialization
 	void Start ()
     {
@@ -21,10 +21,16 @@ public class clickButton : MonoBehaviour
             {
                 if (hit.rigidbody != null && hit.collider.name == this.gameObject.name)
                 {
-                    Debug.Log(hit.rigidbody.name);
- //                   hit.rigidbody.AddForceAtPosition(ray.direction * pokeForce, hit.point);
+					isTrigger = true;
                 }
             }
         }
+
+		if (Input.GetMouseButtonUp(0))
+		{
+			isTrigger = false;
+		}
+
+
     }
 }

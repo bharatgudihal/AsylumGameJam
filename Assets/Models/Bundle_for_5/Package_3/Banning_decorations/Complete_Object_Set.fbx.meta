@@ -1,0 +1,947 @@
+fileFormatVersion: 2
+guid: 5a2bcb2a860ab7c4da6401f5b279ddf0
+timeCreated: 1479001790
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Blue_Device
+    100002: Body
+    100004: Body 1
+    100006: Body 2
+    100008: Body 3
+    100010: Bolts
+    100012: Clock
+    100014: Clock_Face
+    100016: Clock_Frame
+    100018: Cog_1
+    100020: Cog_2
+    100022: Cog_3
+    100024: Cog_4
+    100026: Cog_5
+    100028: Cog_6
+    100030: Cog_7
+    100032: Cog_Panel
+    100034: Cogs
+    100036: Compass
+    100038: //RootNode
+    100040: Core_Shape
+    100042: Dial_Face
+    100044: Dial_Frame
+    100046: Display_Box
+    100048: Frame
+    100050: Knob_Base
+    100052: Knob_Switch_Base_Plate
+    100054: Knobs
+    100056: Knobs 1
+    100058: Leg_1
+    100060: Leg_2
+    100062: Meter_Face
+    100064: Meter_Frame
+    100066: Panel
+    100068: pCube1
+    100070: pCube1 1
+    100072: pCube1 2
+    100074: pCylinder100
+    100076: pCylinder101
+    100078: pCylinder102
+    100080: pCylinder103
+    100082: pCylinder104
+    100084: pCylinder105
+    100086: pCylinder106
+    100088: pCylinder107
+    100090: pCylinder108
+    100092: pCylinder109
+    100094: pCylinder110
+    100096: pCylinder111
+    100098: pCylinder112
+    100100: pCylinder113
+    100102: pCylinder114
+    100104: pCylinder115
+    100106: pCylinder116
+    100108: pCylinder117
+    100110: pCylinder118
+    100112: pCylinder119
+    100114: pCylinder120
+    100116: pCylinder121
+    100118: pCylinder121 1
+    100120: pCylinder121 2
+    100122: pCylinder122
+    100124: pCylinder122 1
+    100126: pCylinder122 2
+    100128: pCylinder123
+    100130: pCylinder123 1
+    100132: pCylinder123 2
+    100134: pCylinder124
+    100136: pCylinder124 1
+    100138: pCylinder124 2
+    100140: pCylinder125
+    100142: pCylinder125 1
+    100144: pCylinder125 2
+    100146: pCylinder126
+    100148: pCylinder126 1
+    100150: pCylinder126 2
+    100152: pCylinder127
+    100154: pCylinder127 1
+    100156: pCylinder127 2
+    100158: pCylinder128
+    100160: pCylinder128 1
+    100162: pCylinder128 2
+    100164: pCylinder129
+    100166: pCylinder129 1
+    100168: pCylinder129 2
+    100170: pCylinder130
+    100172: pCylinder130 1
+    100174: pCylinder130 2
+    100176: pCylinder131
+    100178: pCylinder131 1
+    100180: pCylinder132
+    100182: pCylinder132 1
+    100184: pCylinder68
+    100186: pCylinder70
+    100188: pCylinder72
+    100190: pCylinder73
+    100192: pCylinder74
+    100194: pCylinder75
+    100196: pCylinder76
+    100198: pCylinder77
+    100200: pCylinder78
+    100202: pCylinder79
+    100204: pCylinder81
+    100206: pCylinder82
+    100208: pCylinder83
+    100210: pCylinder84
+    100212: pCylinder85
+    100214: pCylinder86
+    100216: pCylinder87
+    100218: pCylinder88
+    100220: pCylinder89
+    100222: pCylinder90
+    100224: pCylinder91
+    100226: pCylinder92
+    100228: pCylinder93
+    100230: pCylinder94
+    100232: pCylinder95
+    100234: pCylinder96
+    100236: pCylinder97
+    100238: pCylinder98
+    100240: pCylinder99
+    100242: Plaque
+    100244: Plugs
+    100246: polySurface27
+    100248: polySurface28
+    100250: polySurface39
+    100252: polySurface40
+    100254: polySurface42
+    100256: polySurface44
+    100258: polySurface45
+    100260: polySurface46
+    100262: polySurface47
+    100264: polySurface48
+    100266: pSphere10
+    100268: pSphere11
+    100270: pSphere11 1
+    100272: pSphere11 2
+    100274: pSphere12
+    100276: pSphere12 1
+    100278: pSphere12 2
+    100280: pSphere13
+    100282: pSphere13 1
+    100284: pSphere13 2
+    100286: pSphere14
+    100288: pSphere14 1
+    100290: pSphere14 2
+    100292: pSphere15
+    100294: pSphere15 1
+    100296: pSphere15 2
+    100298: pSphere16
+    100300: pSphere16 1
+    100302: pSphere16 2
+    100304: pSphere17
+    100306: pSphere17 1
+    100308: pSphere17 2
+    100310: pSphere18
+    100312: pSphere18 1
+    100314: pSphere18 2
+    100316: pSphere19
+    100318: pSphere19 1
+    100320: pSphere19 2
+    100322: pSphere20
+    100324: pSphere20 1
+    100326: pSphere20 2
+    100328: pSphere21
+    100330: pSphere21 1
+    100332: pSphere21 2
+    100334: pSphere22
+    100336: pSphere22 1
+    100338: pSphere22 2
+    100340: pSphere6
+    100342: pSphere7
+    100344: pSphere8
+    100346: pSphere9
+    100348: Screws
+    100350: Screws 1
+    100352: Screws 2
+    100354: Screws 3
+    100356: Shelf_1
+    100358: Shelf_2
+    100360: Shelving_Pole_1
+    100362: Shelving_Pole_2
+    100364: Shelving_Pole_3
+    100366: Silver_Ports
+    100368: Small_Meter
+    100370: Switch_Base
+    100372: Watch
+    100374: Watch 1
+    100376: Watch 2
+    100378: Watch1
+    400000: Blue_Device
+    400002: Body
+    400004: Body 1
+    400006: Body 2
+    400008: Body 3
+    400010: Bolts
+    400012: Clock
+    400014: Clock_Face
+    400016: Clock_Frame
+    400018: Cog_1
+    400020: Cog_2
+    400022: Cog_3
+    400024: Cog_4
+    400026: Cog_5
+    400028: Cog_6
+    400030: Cog_7
+    400032: Cog_Panel
+    400034: Cogs
+    400036: Compass
+    400038: //RootNode
+    400040: Core_Shape
+    400042: Dial_Face
+    400044: Dial_Frame
+    400046: Display_Box
+    400048: Frame
+    400050: Knob_Base
+    400052: Knob_Switch_Base_Plate
+    400054: Knobs
+    400056: Knobs 1
+    400058: Leg_1
+    400060: Leg_2
+    400062: Meter_Face
+    400064: Meter_Frame
+    400066: Panel
+    400068: pCube1
+    400070: pCube1 1
+    400072: pCube1 2
+    400074: pCylinder100
+    400076: pCylinder101
+    400078: pCylinder102
+    400080: pCylinder103
+    400082: pCylinder104
+    400084: pCylinder105
+    400086: pCylinder106
+    400088: pCylinder107
+    400090: pCylinder108
+    400092: pCylinder109
+    400094: pCylinder110
+    400096: pCylinder111
+    400098: pCylinder112
+    400100: pCylinder113
+    400102: pCylinder114
+    400104: pCylinder115
+    400106: pCylinder116
+    400108: pCylinder117
+    400110: pCylinder118
+    400112: pCylinder119
+    400114: pCylinder120
+    400116: pCylinder121
+    400118: pCylinder121 1
+    400120: pCylinder121 2
+    400122: pCylinder122
+    400124: pCylinder122 1
+    400126: pCylinder122 2
+    400128: pCylinder123
+    400130: pCylinder123 1
+    400132: pCylinder123 2
+    400134: pCylinder124
+    400136: pCylinder124 1
+    400138: pCylinder124 2
+    400140: pCylinder125
+    400142: pCylinder125 1
+    400144: pCylinder125 2
+    400146: pCylinder126
+    400148: pCylinder126 1
+    400150: pCylinder126 2
+    400152: pCylinder127
+    400154: pCylinder127 1
+    400156: pCylinder127 2
+    400158: pCylinder128
+    400160: pCylinder128 1
+    400162: pCylinder128 2
+    400164: pCylinder129
+    400166: pCylinder129 1
+    400168: pCylinder129 2
+    400170: pCylinder130
+    400172: pCylinder130 1
+    400174: pCylinder130 2
+    400176: pCylinder131
+    400178: pCylinder131 1
+    400180: pCylinder132
+    400182: pCylinder132 1
+    400184: pCylinder68
+    400186: pCylinder70
+    400188: pCylinder72
+    400190: pCylinder73
+    400192: pCylinder74
+    400194: pCylinder75
+    400196: pCylinder76
+    400198: pCylinder77
+    400200: pCylinder78
+    400202: pCylinder79
+    400204: pCylinder81
+    400206: pCylinder82
+    400208: pCylinder83
+    400210: pCylinder84
+    400212: pCylinder85
+    400214: pCylinder86
+    400216: pCylinder87
+    400218: pCylinder88
+    400220: pCylinder89
+    400222: pCylinder90
+    400224: pCylinder91
+    400226: pCylinder92
+    400228: pCylinder93
+    400230: pCylinder94
+    400232: pCylinder95
+    400234: pCylinder96
+    400236: pCylinder97
+    400238: pCylinder98
+    400240: pCylinder99
+    400242: Plaque
+    400244: Plugs
+    400246: polySurface27
+    400248: polySurface28
+    400250: polySurface39
+    400252: polySurface40
+    400254: polySurface42
+    400256: polySurface44
+    400258: polySurface45
+    400260: polySurface46
+    400262: polySurface47
+    400264: polySurface48
+    400266: pSphere10
+    400268: pSphere11
+    400270: pSphere11 1
+    400272: pSphere11 2
+    400274: pSphere12
+    400276: pSphere12 1
+    400278: pSphere12 2
+    400280: pSphere13
+    400282: pSphere13 1
+    400284: pSphere13 2
+    400286: pSphere14
+    400288: pSphere14 1
+    400290: pSphere14 2
+    400292: pSphere15
+    400294: pSphere15 1
+    400296: pSphere15 2
+    400298: pSphere16
+    400300: pSphere16 1
+    400302: pSphere16 2
+    400304: pSphere17
+    400306: pSphere17 1
+    400308: pSphere17 2
+    400310: pSphere18
+    400312: pSphere18 1
+    400314: pSphere18 2
+    400316: pSphere19
+    400318: pSphere19 1
+    400320: pSphere19 2
+    400322: pSphere20
+    400324: pSphere20 1
+    400326: pSphere20 2
+    400328: pSphere21
+    400330: pSphere21 1
+    400332: pSphere21 2
+    400334: pSphere22
+    400336: pSphere22 1
+    400338: pSphere22 2
+    400340: pSphere6
+    400342: pSphere7
+    400344: pSphere8
+    400346: pSphere9
+    400348: Screws
+    400350: Screws 1
+    400352: Screws 2
+    400354: Screws 3
+    400356: Shelf_1
+    400358: Shelf_2
+    400360: Shelving_Pole_1
+    400362: Shelving_Pole_2
+    400364: Shelving_Pole_3
+    400366: Silver_Ports
+    400368: Small_Meter
+    400370: Switch_Base
+    400372: Watch
+    400374: Watch 1
+    400376: Watch 2
+    400378: Watch1
+    2300000: Body
+    2300002: Body 1
+    2300004: Body 2
+    2300006: Body 3
+    2300008: Clock_Face
+    2300010: Clock_Frame
+    2300012: Cog_1
+    2300014: Cog_2
+    2300016: Cog_3
+    2300018: Cog_4
+    2300020: Cog_5
+    2300022: Cog_6
+    2300024: Cog_7
+    2300026: Dial_Face
+    2300028: Dial_Frame
+    2300030: Frame
+    2300032: Knob_Switch_Base_Plate
+    2300034: Leg_1
+    2300036: Leg_2
+    2300038: Meter_Face
+    2300040: Meter_Frame
+    2300042: Panel
+    2300044: pCube1
+    2300046: pCube1 1
+    2300048: pCube1 2
+    2300050: pCylinder100
+    2300052: pCylinder101
+    2300054: pCylinder102
+    2300056: pCylinder103
+    2300058: pCylinder104
+    2300060: pCylinder105
+    2300062: pCylinder106
+    2300064: pCylinder107
+    2300066: pCylinder108
+    2300068: pCylinder109
+    2300070: pCylinder110
+    2300072: pCylinder111
+    2300074: pCylinder112
+    2300076: pCylinder113
+    2300078: pCylinder114
+    2300080: pCylinder115
+    2300082: pCylinder116
+    2300084: pCylinder117
+    2300086: pCylinder118
+    2300088: pCylinder119
+    2300090: pCylinder120
+    2300092: pCylinder121
+    2300094: pCylinder121 1
+    2300096: pCylinder121 2
+    2300098: pCylinder122
+    2300100: pCylinder122 1
+    2300102: pCylinder122 2
+    2300104: pCylinder123
+    2300106: pCylinder123 1
+    2300108: pCylinder123 2
+    2300110: pCylinder124
+    2300112: pCylinder124 1
+    2300114: pCylinder124 2
+    2300116: pCylinder125
+    2300118: pCylinder125 1
+    2300120: pCylinder125 2
+    2300122: pCylinder126
+    2300124: pCylinder126 1
+    2300126: pCylinder126 2
+    2300128: pCylinder127
+    2300130: pCylinder127 1
+    2300132: pCylinder127 2
+    2300134: pCylinder128
+    2300136: pCylinder128 1
+    2300138: pCylinder128 2
+    2300140: pCylinder129
+    2300142: pCylinder129 1
+    2300144: pCylinder129 2
+    2300146: pCylinder130
+    2300148: pCylinder130 1
+    2300150: pCylinder130 2
+    2300152: pCylinder131
+    2300154: pCylinder131 1
+    2300156: pCylinder132
+    2300158: pCylinder132 1
+    2300160: pCylinder68
+    2300162: pCylinder70
+    2300164: pCylinder72
+    2300166: pCylinder73
+    2300168: pCylinder74
+    2300170: pCylinder75
+    2300172: pCylinder76
+    2300174: pCylinder77
+    2300176: pCylinder78
+    2300178: pCylinder79
+    2300180: pCylinder81
+    2300182: pCylinder82
+    2300184: pCylinder83
+    2300186: pCylinder84
+    2300188: pCylinder85
+    2300190: pCylinder86
+    2300192: pCylinder87
+    2300194: pCylinder88
+    2300196: pCylinder89
+    2300198: pCylinder90
+    2300200: pCylinder91
+    2300202: pCylinder92
+    2300204: pCylinder93
+    2300206: pCylinder94
+    2300208: pCylinder95
+    2300210: pCylinder96
+    2300212: pCylinder97
+    2300214: pCylinder98
+    2300216: pCylinder99
+    2300218: Plaque
+    2300220: polySurface27
+    2300222: polySurface28
+    2300224: polySurface39
+    2300226: polySurface40
+    2300228: polySurface42
+    2300230: polySurface44
+    2300232: polySurface45
+    2300234: polySurface46
+    2300236: polySurface47
+    2300238: polySurface48
+    2300240: pSphere10
+    2300242: pSphere11
+    2300244: pSphere11 1
+    2300246: pSphere11 2
+    2300248: pSphere12
+    2300250: pSphere12 1
+    2300252: pSphere12 2
+    2300254: pSphere13
+    2300256: pSphere13 1
+    2300258: pSphere13 2
+    2300260: pSphere14
+    2300262: pSphere14 1
+    2300264: pSphere14 2
+    2300266: pSphere15
+    2300268: pSphere15 1
+    2300270: pSphere15 2
+    2300272: pSphere16
+    2300274: pSphere16 1
+    2300276: pSphere16 2
+    2300278: pSphere17
+    2300280: pSphere17 1
+    2300282: pSphere17 2
+    2300284: pSphere18
+    2300286: pSphere18 1
+    2300288: pSphere18 2
+    2300290: pSphere19
+    2300292: pSphere19 1
+    2300294: pSphere19 2
+    2300296: pSphere20
+    2300298: pSphere20 1
+    2300300: pSphere20 2
+    2300302: pSphere21
+    2300304: pSphere21 1
+    2300306: pSphere21 2
+    2300308: pSphere22
+    2300310: pSphere22 1
+    2300312: pSphere22 2
+    2300314: pSphere6
+    2300316: pSphere7
+    2300318: pSphere8
+    2300320: pSphere9
+    2300322: Shelf_1
+    2300324: Shelf_2
+    2300326: Watch 1
+    2300328: Watch 2
+    3300000: Body
+    3300002: Body 1
+    3300004: Body 2
+    3300006: Body 3
+    3300008: Clock_Face
+    3300010: Clock_Frame
+    3300012: Cog_1
+    3300014: Cog_2
+    3300016: Cog_3
+    3300018: Cog_4
+    3300020: Cog_5
+    3300022: Cog_6
+    3300024: Cog_7
+    3300026: Dial_Face
+    3300028: Dial_Frame
+    3300030: Frame
+    3300032: Knob_Switch_Base_Plate
+    3300034: Leg_1
+    3300036: Leg_2
+    3300038: Meter_Face
+    3300040: Meter_Frame
+    3300042: Panel
+    3300044: pCube1
+    3300046: pCube1 1
+    3300048: pCube1 2
+    3300050: pCylinder100
+    3300052: pCylinder101
+    3300054: pCylinder102
+    3300056: pCylinder103
+    3300058: pCylinder104
+    3300060: pCylinder105
+    3300062: pCylinder106
+    3300064: pCylinder107
+    3300066: pCylinder108
+    3300068: pCylinder109
+    3300070: pCylinder110
+    3300072: pCylinder111
+    3300074: pCylinder112
+    3300076: pCylinder113
+    3300078: pCylinder114
+    3300080: pCylinder115
+    3300082: pCylinder116
+    3300084: pCylinder117
+    3300086: pCylinder118
+    3300088: pCylinder119
+    3300090: pCylinder120
+    3300092: pCylinder121
+    3300094: pCylinder121 1
+    3300096: pCylinder121 2
+    3300098: pCylinder122
+    3300100: pCylinder122 1
+    3300102: pCylinder122 2
+    3300104: pCylinder123
+    3300106: pCylinder123 1
+    3300108: pCylinder123 2
+    3300110: pCylinder124
+    3300112: pCylinder124 1
+    3300114: pCylinder124 2
+    3300116: pCylinder125
+    3300118: pCylinder125 1
+    3300120: pCylinder125 2
+    3300122: pCylinder126
+    3300124: pCylinder126 1
+    3300126: pCylinder126 2
+    3300128: pCylinder127
+    3300130: pCylinder127 1
+    3300132: pCylinder127 2
+    3300134: pCylinder128
+    3300136: pCylinder128 1
+    3300138: pCylinder128 2
+    3300140: pCylinder129
+    3300142: pCylinder129 1
+    3300144: pCylinder129 2
+    3300146: pCylinder130
+    3300148: pCylinder130 1
+    3300150: pCylinder130 2
+    3300152: pCylinder131
+    3300154: pCylinder131 1
+    3300156: pCylinder132
+    3300158: pCylinder132 1
+    3300160: pCylinder68
+    3300162: pCylinder70
+    3300164: pCylinder72
+    3300166: pCylinder73
+    3300168: pCylinder74
+    3300170: pCylinder75
+    3300172: pCylinder76
+    3300174: pCylinder77
+    3300176: pCylinder78
+    3300178: pCylinder79
+    3300180: pCylinder81
+    3300182: pCylinder82
+    3300184: pCylinder83
+    3300186: pCylinder84
+    3300188: pCylinder85
+    3300190: pCylinder86
+    3300192: pCylinder87
+    3300194: pCylinder88
+    3300196: pCylinder89
+    3300198: pCylinder90
+    3300200: pCylinder91
+    3300202: pCylinder92
+    3300204: pCylinder93
+    3300206: pCylinder94
+    3300208: pCylinder95
+    3300210: pCylinder96
+    3300212: pCylinder97
+    3300214: pCylinder98
+    3300216: pCylinder99
+    3300218: Plaque
+    3300220: polySurface27
+    3300222: polySurface28
+    3300224: polySurface39
+    3300226: polySurface40
+    3300228: polySurface42
+    3300230: polySurface44
+    3300232: polySurface45
+    3300234: polySurface46
+    3300236: polySurface47
+    3300238: polySurface48
+    3300240: pSphere10
+    3300242: pSphere11
+    3300244: pSphere11 1
+    3300246: pSphere11 2
+    3300248: pSphere12
+    3300250: pSphere12 1
+    3300252: pSphere12 2
+    3300254: pSphere13
+    3300256: pSphere13 1
+    3300258: pSphere13 2
+    3300260: pSphere14
+    3300262: pSphere14 1
+    3300264: pSphere14 2
+    3300266: pSphere15
+    3300268: pSphere15 1
+    3300270: pSphere15 2
+    3300272: pSphere16
+    3300274: pSphere16 1
+    3300276: pSphere16 2
+    3300278: pSphere17
+    3300280: pSphere17 1
+    3300282: pSphere17 2
+    3300284: pSphere18
+    3300286: pSphere18 1
+    3300288: pSphere18 2
+    3300290: pSphere19
+    3300292: pSphere19 1
+    3300294: pSphere19 2
+    3300296: pSphere20
+    3300298: pSphere20 1
+    3300300: pSphere20 2
+    3300302: pSphere21
+    3300304: pSphere21 1
+    3300306: pSphere21 2
+    3300308: pSphere22
+    3300310: pSphere22 1
+    3300312: pSphere22 2
+    3300314: pSphere6
+    3300316: pSphere7
+    3300318: pSphere8
+    3300320: pSphere9
+    3300322: Shelf_1
+    3300324: Shelf_2
+    3300326: Watch 1
+    3300328: Watch 2
+    4300000: Meter_Face
+    4300002: Meter_Frame
+    4300004: Panel
+    4300006: Dial_Frame
+    4300008: Dial_Face
+    4300010: Cog_7
+    4300012: Cog_5
+    4300014: Cog_6
+    4300016: Cog_4
+    4300018: Cog_3
+    4300020: Cog_1
+    4300022: Cog_2
+    4300024: pCylinder103
+    4300026: pCylinder104
+    4300028: pCylinder105
+    4300030: pCylinder106
+    4300032: pCylinder97
+    4300034: pCylinder98
+    4300036: pCylinder99
+    4300038: pCylinder100
+    4300040: pCylinder93
+    4300042: pCylinder94
+    4300044: pCylinder95
+    4300046: pCylinder96
+    4300048: pCylinder102
+    4300050: pCylinder101
+    4300052: pCylinder107
+    4300054: pCylinder108
+    4300056: pCylinder109
+    4300058: pCylinder110
+    4300060: pCylinder111
+    4300062: pCylinder112
+    4300064: pCylinder113
+    4300066: pCylinder114
+    4300068: pCylinder73
+    4300070: pCylinder74
+    4300072: pCylinder76
+    4300074: pCylinder75
+    4300076: pCylinder77
+    4300078: pCylinder78
+    4300080: pCylinder79
+    4300082: pCylinder81
+    4300084: pCylinder72
+    4300086: polySurface28
+    4300088: polySurface27
+    4300090: pCylinder70
+    4300092: pCylinder68
+    4300094: pCylinder88
+    4300096: pCylinder86
+    4300098: pCylinder87
+    4300100: pCylinder82
+    4300102: pCylinder83
+    4300104: pCylinder84
+    4300106: pCylinder91
+    4300108: pCylinder90
+    4300110: pCylinder85
+    4300112: pCylinder92
+    4300114: pCylinder89
+    4300116: polySurface48
+    4300118: polySurface47
+    4300120: polySurface46
+    4300122: polySurface45
+    4300124: polySurface44
+    4300126: polySurface42
+    4300128: polySurface40
+    4300130: polySurface39
+    4300132: Body
+    4300134: pCylinder131
+    4300136: Watch
+    4300138: pCylinder132
+    4300140: pCylinder131
+    4300142: Watch
+    4300144: pCylinder132
+    4300146: Clock_Face
+    4300148: Clock_Frame
+    4300150: Body
+    4300152: Plaque
+    4300154: Knob_Switch_Base_Plate
+    4300156: Frame
+    4300158: pCylinder117
+    4300160: pCylinder118
+    4300162: pCylinder119
+    4300164: pCylinder120
+    4300166: pSphere8
+    4300168: pSphere9
+    4300170: pSphere10
+    4300172: pSphere6
+    4300174: pSphere7
+    4300176: Body
+    4300178: Leg_1
+    4300180: Leg_2
+    4300182: Body
+    4300184: pCylinder115
+    4300186: pCylinder116
+    4300188: Shelf_1
+    4300190: Shelf_2
+    4300192: pCube1
+    4300194: pSphere11
+    4300196: pCylinder127
+    4300198: pCylinder129
+    4300200: pSphere12
+    4300202: pSphere14
+    4300204: pCylinder130
+    4300206: pCylinder128
+    4300208: pSphere13
+    4300210: pCylinder124
+    4300212: pSphere15
+    4300214: pCylinder121
+    4300216: pSphere16
+    4300218: pSphere21
+    4300220: pCylinder122
+    4300222: pCylinder125
+    4300224: pSphere17
+    4300226: pSphere22
+    4300228: pSphere18
+    4300230: pSphere20
+    4300232: pCylinder123
+    4300234: pCylinder126
+    4300236: pSphere19
+    4300238: pCube1
+    4300240: pSphere11
+    4300242: pCylinder127
+    4300244: pCylinder129
+    4300246: pSphere12
+    4300248: pSphere14
+    4300250: pCylinder130
+    4300252: pCylinder128
+    4300254: pSphere13
+    4300256: pCylinder124
+    4300258: pSphere15
+    4300260: pCylinder121
+    4300262: pSphere16
+    4300264: pSphere21
+    4300266: pCylinder122
+    4300268: pCylinder125
+    4300270: pSphere17
+    4300272: pSphere22
+    4300274: pSphere18
+    4300276: pSphere20
+    4300278: pCylinder123
+    4300280: pCylinder126
+    4300282: pSphere19
+    4300284: pCube1
+    4300286: pSphere11
+    4300288: pCylinder127
+    4300290: pCylinder129
+    4300292: pSphere12
+    4300294: pSphere14
+    4300296: pCylinder130
+    4300298: pCylinder128
+    4300300: pSphere13
+    4300302: pCylinder124
+    4300304: pSphere15
+    4300306: pCylinder121
+    4300308: pSphere16
+    4300310: pSphere21
+    4300312: pCylinder122
+    4300314: pCylinder125
+    4300316: pSphere17
+    4300318: pSphere22
+    4300320: pSphere18
+    4300322: pSphere20
+    4300324: pCylinder123
+    4300326: pCylinder126
+    4300328: pSphere19
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

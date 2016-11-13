@@ -39,17 +39,19 @@ public class Phase2 : MonoBehaviour {
 				timer = 0f;
 				state++;
 				BathySphere.GetComponent<Animator> ().enabled = true;
+				StartCoroutine (TransitionToPhase3 ());
 			}
 			break;
-//		case 2:
-//			float currentPosition = Mathf.Lerp (BathySphere.transform.position.y, finalPosition, positionChangeSpeed);
-//			BathySphere.transform.position = new Vector3 (BathySphere.transform.position.x, currentPosition, BathySphere.transform.position.z);
-//			if (currentPosition <= finalPosition + 0.1) {
-//				state++;
-//			}
-//			break;
 		default:
 			break;
 		}
 	}
+
+	IEnumerator TransitionToPhase3(){
+		yield return new WaitForSeconds (5.0f);
+		EventManager.CallPhaseChanger ();
+
+	}
+
+
 }
