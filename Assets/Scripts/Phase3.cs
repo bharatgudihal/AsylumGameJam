@@ -29,7 +29,7 @@ public class Phase3: MonoBehaviour {
 		dialogue.Add (new TextElement("Lost sight of you",0.1f,4f));
 		dialogue.Add (new TextElement("Hold on",0.1f,4f));
 		dialogue.Add (new TextElement("Looks like you've got an oxygen leak.",0.1f,4f));
-		dialogue.Add (new TextElement("Switch to your back up tank",0.1f,2f));
+		dialogue.Add (new TextElement("Pull that lever to your left",0.1f,2f));
 		dialogue.Add (new TextElement("I'll focus on getting you out",0.1f,4f));
 		EventManager.CallTextWriter (dialogue);
 		state = 1;

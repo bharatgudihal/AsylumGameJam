@@ -21,6 +21,11 @@ public class Phase1 : MonoBehaviour {
 	public AudioClip[] phase1SfxClips;
 	bool stopcoroutines;
 
+
+	public GameObject Lever;
+	clickButton button;
+	bool interactionStep = false;
+
 	public void Awake(){
 	}
 
@@ -31,6 +36,7 @@ public class Phase1 : MonoBehaviour {
 		AudioManager.instance.PlayMusic (phase1AudioClips[1],true);
 
 		RenderSettings.fogColor = phase1Color;
+		button = Lever.gameObject.GetComponent<clickButton> ();
 
 		dialogue = new List<TextElement> ();
 		dialogue.Add (new TextElement("Glad to have you back!",0.1f,4f));
@@ -40,35 +46,62 @@ public class Phase1 : MonoBehaviour {
 		dialogue.Add (new TextElement("Why are you descending?",0.1f,4f));
 		dialogue.Add (new TextElement("It's alright",0.1f,2f));
 		dialogue.Add (new TextElement("We can fix this",0.1f,4f));
-		dialogue.Add (new TextElement("Pull that lever to your left",0.1f,4f));
+		dialogue.Add (new TextElement("Pull that lever to your right",0.1f,4f));
 		EventManager.CallTextWriter (dialogue);
 	}
 	
 	// Update is called once per frame
-	public void Update () {
-		if (isPhaseActive) {
+	public void Update () 
+	{
+		if (isPhaseActive) 
+		{
 			timer += Time.deltaTime;
-			if (!upperLimitReached) {
+			if (!upperLimitReached) 
+			{
 				Color currentColor = Color.Lerp (RenderSettings.fogColor, highestSurface, changeSpeed);
 				RenderSettings.fogColor = currentColor;
 				//EventManager.CallRockMovement (0);
-				if (timer > surfaceWaitTime && !stopcoroutines) {					
+				if (timer > surfaceWaitTime && !stopcoroutines) 
+				{					
 					StartCoroutine (WaitForOneSecond ());
 					timer = 0.0f;
 					upperLimitReached = true;
 				}
 			}
-			if (startDescent) {
+			if (startDescent) 
+			{
 				Color currentColor = Color.Lerp (RenderSettings.fogColor, phase1Color, changeSpeed);
 				RenderSettings.fogColor = currentColor;
 
-				if (timer > phase1WaitTime) {
-					EventManager.CallPhaseChanger ();
+				if (timer > phase1WaitTime) 
+				{
 					startDescent = false;
+					interactionStep = true;
 				}
 			}
+
+			if (interactionStep == true) 
+			{
+				if (button.isTrigger == true) 
+				{
+					StartCoroutine (interaction());
+					button.isTrigger = false;
+				}
+
+			}
+
 		}
 	}
+
+
+	IEnumerator interaction()
+	{
+		yield return new WaitForSeconds (1.0f);	
+		EventManager.CalldisplayStrings ("That should put you back on course", 0.1f, 0.5f);
+		EventManager.CallPhaseChanger ();
+		startDescent = false;
+	}
+
 
 	IEnumerator  WaitForOneSecond(){
 		stopcoroutines = true;

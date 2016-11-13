@@ -5,8 +5,11 @@ using System.Collections.Generic;
 public class Phase4 : MonoBehaviour 
 {
 
-	public GameObject switch_Object_U;
-	clickButton switch_U;
+	public GameObject button_Object_L;
+	public GameObject button_Object_R;
+
+	clickButton button_L;
+	clickButton button_R;
 
 	List<TextElement> dialogue;
 	public int step = 5;
@@ -21,9 +24,9 @@ public class Phase4 : MonoBehaviour
 		light = lightObject.GetComponent<Light> (); 
 		dialogue = new List<TextElement> ();
 
-		StartCoroutine (timeDelay(7));
+		button_L = button_Object_L.gameObject.GetComponent<clickButton> ();
+		button_R = button_Object_R.gameObject.GetComponent<clickButton> ();
 
-		switch_U = switch_Object_U.gameObject.GetComponent<clickButton> ();
 //		switch_D = switch_Object_D.gameObject.GetComponent<clickButton> ();
 	}
 
@@ -32,6 +35,7 @@ public class Phase4 : MonoBehaviour
 		dialogue.Add (new TextElement("", 0.1f, 2.0f));
 		dialogue.Add (new TextElement("I have a solution", 0.1f, 4.0f));
 		dialogue.Add (new TextElement("Press one of the buttons", 0.1f, 4.0f));
+		StartCoroutine (timeDelay(14.0f));
 		EventManager.CallTextWriter (dialogue);
 	}
 
@@ -45,9 +49,11 @@ public class Phase4 : MonoBehaviour
 	{
 		if (step == 7) 
 		{
-			if (switch_U.isTrigger == true) 
+			if (button_L.isTrigger == true || button_R.isTrigger == true) 
 			{
-				switch_U.isTrigger = false;
+				button_L.isTrigger = false;
+				button_R.isTrigger = false;
+
 				StartCoroutine (Shinning (1.0f));
 				StartCoroutine (callText ("Again", 0.1f, 8));
 				AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [4], true);
@@ -57,9 +63,11 @@ public class Phase4 : MonoBehaviour
 		}
 		if (step == 8) 
 		{
-			if (switch_U.isTrigger == true) 
+			if (button_L.isTrigger == true || button_R.isTrigger == true) 
 			{
-				switch_U.isTrigger = false;
+				button_L.isTrigger = false;
+				button_R.isTrigger = false;
+
 				StartCoroutine (Shinning (1.0f));
 				StartCoroutine (callText ("Again", 0.1f, 9));
 			}
@@ -67,11 +75,14 @@ public class Phase4 : MonoBehaviour
 
 		if (step == 9) 
 		{
-			if (switch_U.isTrigger == true) 
+			if (button_L.isTrigger == true || button_R.isTrigger == true) 
 			{
+				button_L.isTrigger = false;
+				button_R.isTrigger = false;
+
 				StartCoroutine (callText ("Good", 0.1f, 10));
 				StartCoroutine (Shinning (10.0f));
-				switch_U.isTrigger = false;
+
 				EventManager.CallPhaseChanger ();
 			}
 		}
@@ -100,13 +111,13 @@ public class Phase4 : MonoBehaviour
 		yield return new WaitForSeconds(0.1f);
 		EventManager.CalldisplayStrings (text, 0.1f, 1.0f);
 		yield return new WaitForSeconds(1.0f);
-		switch_U.isTrigger = false;
+		button_L.isTrigger = false;
 		step = i_step;
 	}
 
-	IEnumerator timeDelay(int i_step)
+	IEnumerator timeDelay(float time)
 	{
-		yield return new WaitForSeconds(13.0f);
+		yield return new WaitForSeconds(time);
 		step = 7;
 	}
 
