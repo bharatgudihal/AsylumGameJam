@@ -21,9 +21,7 @@ public class Phase3: MonoBehaviour {
     // Use this for initialization
     public void Start () {
 		dialogue = new List<TextElement> ();
-		//EventManager.CallTextWriter (dialogue);
 		button = lever_Object.gameObject.GetComponent<clickButton>();
-
 	}
 
 	public void EnablePhase(){
