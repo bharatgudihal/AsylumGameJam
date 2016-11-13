@@ -27098,7 +27098,7 @@ MonoBehaviour:
   targetColor2: {r: 0, g: 0, b: 0, a: 0}
   colorChangeSpeed: 0.005
   slowDownClip: {fileID: 8300000, guid: 2c40bc0eb202ce941819243de9cf6a6e, type: 3}
-  crashClip: {fileID: 0}
+  monsterClip: {fileID: 8300000, guid: df5240fb6ba5af247b582e27cde3554a, type: 3}
   backgroundMusic: {fileID: 1535542540}
 --- !u!114 &1498923076
 MonoBehaviour:
