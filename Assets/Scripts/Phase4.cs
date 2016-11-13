@@ -6,7 +6,6 @@ public class Phase4 : MonoBehaviour
 {
 
 	public GameObject switch_Object_U;
-
 	clickButton switch_U;
 
 	List<TextElement> dialogue;
@@ -17,22 +16,26 @@ public class Phase4 : MonoBehaviour
 	Light light;
 
 	// Use this for initialization
-	void Start () 
+	public void Start () 
 	{
 		light = lightObject.GetComponent<Light> (); 
-
 		dialogue = new List<TextElement> ();
-		dialogue.Add (new TextElement("", 0.1f, 2.0f));
-		dialogue.Add (new TextElement("I have a solution", 0.1f, 4.0f));
-		dialogue.Add (new TextElement("Flip the switches to your left", 0.1f, 4.0f));
 
-		EventManager.CallTextWriter (dialogue);
 		StartCoroutine (timeDelay(7));
 
 		switch_U = switch_Object_U.gameObject.GetComponent<clickButton> ();
 //		switch_D = switch_Object_D.gameObject.GetComponent<clickButton> ();
 	}
-	
+
+	public void EnablePhase()
+	{
+		dialogue.Add (new TextElement("", 0.1f, 2.0f));
+		dialogue.Add (new TextElement("I have a solution", 0.1f, 4.0f));
+		dialogue.Add (new TextElement("Flip the switches to your left", 0.1f, 4.0f));
+		EventManager.CallTextWriter (dialogue);
+	}
+
+
 	// Update is called once per frame
 	public void Update () 
 	{

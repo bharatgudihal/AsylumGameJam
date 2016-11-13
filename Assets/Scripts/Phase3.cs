@@ -5,6 +5,11 @@ using System.Collections.Generic;
 public class Phase3: MonoBehaviour {
 
     public GameObject BathySphere;
+
+	public GameObject lever_Object;
+	clickButton button;
+
+
 	List<TextElement> dialogue;
 	public Color targetColor;
 	float timer;
@@ -17,7 +22,7 @@ public class Phase3: MonoBehaviour {
     public void Start () {
 		dialogue = new List<TextElement> ();
 		//EventManager.CallTextWriter (dialogue);
-
+		button = lever_Object.gameObject.GetComponent<clickButton>();
 
 	}
 
@@ -39,16 +44,18 @@ public class Phase3: MonoBehaviour {
 	}
 
 
-
-	
 	// Update is called once per frame
-	public void Update () {		
-		switch (state) {
+	public void Update () 
+	{		
+		switch (state) 
+		{
 		case 1:
 			timer += Time.deltaTime;
 			Color currentColor = Color.Lerp (RenderSettings.fogColor, targetColor, colorChangeSpeed);
 			RenderSettings.fogColor = currentColor;
-			if (timer > descentTime) {
+
+			if (timer > descentTime)
+			{
 				timer = 0f;
 				state++;
 			}
@@ -56,26 +63,49 @@ public class Phase3: MonoBehaviour {
 
 		case 2:
 			//Read the player input
+			if (button.isTrigger == true) 
+			{
+				StartCoroutine (stateTwo());
+				button.isTrigger = false;
+			}
 			break;
 
 		case 3:
-			StartCoroutine (LightShake ());
+			//StartCoroutine (LightShake ());
+			//state = 4;
 			break;
 		}
 	}
 
-	IEnumerator  LightShake(){
+	IEnumerator stateTwo()
+	{
+		yield return new WaitForSeconds (1.0f);
+		StartCoroutine (LightShake());
+	}
 
+
+	IEnumerator  LightShake(){
+		
 		//Reached the top
 		AudioManager.instance.StopMusic();
 		//AudioManager.instance.PlayOneShotSFX (phase1SfxClips [0]);
-
 		EventManager.CameraShaker (0.03f, 0.0005f);
 
 		yield return new WaitForSeconds (2.0f);
-		dialogue.Add (new TextElement("That will buy you some time",0.1f,4f));
+
+		dialogue.Add (new TextElement("That will buy you some time", 0.1f, 4f));
+
 		EventManager.CallTextWriter (dialogue);
+
 		yield return new WaitForSeconds (6.0f);
+		StartCoroutine (TransitionToPhase4() );
+	}
+
+	IEnumerator TransitionToPhase4()
+	{
+		yield return new WaitForSeconds (5.0f);
+		EventManager.CallPhaseChanger ();
+
 	}
 
 
