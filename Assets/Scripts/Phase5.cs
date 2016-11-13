@@ -58,17 +58,15 @@ public class Phase5: MonoBehaviour {
 
 		case 3:
 
-			if (UltraGhoul.transform.position.z > 18.0f) {
+			if (UltraGhoul.transform.position.z > 60.0f) {
 				FadeInTheMonster();
 
 			} else {
-				UltraGhoul.GetComponent<MoveGhoul> ().enabled = false;
-				UltraGhoul.GetComponent<Animator> ().enabled =false;
 
 				if (heavyShake) {
-					StartCoroutine (AnotherHeavyShake ());
+
 					heavyShake = false;
-					timer = 0.0f;
+					state++;
 				}
 
 			}
@@ -76,19 +74,8 @@ public class Phase5: MonoBehaviour {
 			break;
 
 
+
 		case 4:
-			//Raise the player
-			timer += Time.deltaTime;
-			Color currentColor2 = Color.Lerp (RenderSettings.fogColor, targetColor2, colorChangeSpeed);
-			RenderSettings.fogColor = currentColor2;
-			if (timer > descentTime) {
-				state++;
-			}
-
-			break;
-
-
-		case 5:
 			//Fade to black
 			if (fadeToBlack) {
 				StartCoroutine (FadeToBlack());
@@ -124,22 +111,6 @@ public class Phase5: MonoBehaviour {
 	}
 
 
-	IEnumerator  AnotherHeavyShake(){
-
-		//Reached the top
-		AudioManager.instance.StopMusic();
-		//AudioManager.instance.PlayOneShotSFX (phase1SfxClips [0]);
-
-		//Shake
-		AudioManager.instance.PlayMusic(AudioManager.instance.generalSFX[2],true);
-		EventManager.CameraShaker (0.04f, 0.0005f);
-		yield return new WaitForSeconds (2.0f);
-		EventManager.CameraShaker (0.05f, 0.0005f);
-		yield return new WaitForSeconds (6.0f);
-		AudioManager.instance.StopMusic();
-		state++;
-		timer = 0.0f;
-	}
 
 
 	IEnumerator Quiet(){
@@ -164,7 +135,8 @@ public class Phase5: MonoBehaviour {
 			yield return null;
 		}
 		interpolator = 1.0f;
-
+		UltraGhoul.GetComponent<MoveGhoul>().enabled = false;
+		UltraGhoul.GetComponent<Animator>().enabled = false;
 		//Game Ends
 	}
 }

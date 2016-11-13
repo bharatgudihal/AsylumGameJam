@@ -31,7 +31,7 @@ public class Phase4 : MonoBehaviour
 	{
 		dialogue.Add (new TextElement("", 0.1f, 2.0f));
 		dialogue.Add (new TextElement("I have a solution", 0.1f, 4.0f));
-		dialogue.Add (new TextElement("Flip the switches to your left", 0.1f, 4.0f));
+		dialogue.Add (new TextElement("Press one of the buttons", 0.1f, 4.0f));
 		EventManager.CallTextWriter (dialogue);
 	}
 
@@ -53,9 +53,9 @@ public class Phase4 : MonoBehaviour
 		if (step == 8) 
 		{
 			if (switch_U.isTrigger == true) 
-			{
+			{				
 				StartCoroutine (Shinning (1.0f));
-				StartCoroutine (callText ("Again!!!", 0.1f, 9));
+				StartCoroutine (callText ("Again", 0.1f, 9));
 			}
 		}
 

@@ -16,15 +16,12 @@ public class Phase1 : MonoBehaviour {
 	public bool startDescent;
 	List<TextElement> dialogue;
 	bool isPhaseActive = true;
-
 	//the audio clips for this phase
 	public AudioClip[] phase1AudioClips;
 	public AudioClip[] phase1SfxClips;
 
-
-
-
-
+	public void Awake(){
+	}
 
     // Use this for initialization
     public void Start () {
@@ -43,7 +40,6 @@ public class Phase1 : MonoBehaviour {
 		dialogue.Add (new TextElement("It's alright",0.1f,2f));
 		dialogue.Add (new TextElement("We can fix this",0.1f,4f));
 		dialogue.Add (new TextElement("Pull that lever to your left",0.1f,4f));
-		dialogue.Add (new TextElement("That should put you back on course",0.1f,5f));
 		EventManager.CallTextWriter (dialogue);
 	}
 	
