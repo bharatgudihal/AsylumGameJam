@@ -12,12 +12,15 @@ public class EventManager : MonoBehaviour {
 	public delegate void ChangePhase ();
 	public static event ChangePhase phaseChanger;
 
-	public delegate void triggerMovement ();
+	public delegate void triggerMovement (int option);
 	public static event triggerMovement RockMovement;
 
 
 	public delegate void showStrings (string text, float delay, float timeVisible);
 	public static event showStrings displayStrings;
+
+	public delegate void changeLevels ();
+	public static event changeLevels levelChanger;
 
 	// Use this for initialization
 	void Start () {
@@ -41,13 +44,17 @@ public class EventManager : MonoBehaviour {
 		phaseChanger ();
 	}
 
-	public static void CallRockMovement()
+	public static void CallRockMovement(int option)
 	{
-		RockMovement ();
+		RockMovement (option);
 	}
 		
 	public static void CalldisplayStrings(string text, float delay, float timeVisible)
 	{
 		displayStrings (text, delay, timeVisible);
+	}
+
+	public static void CallLevelChanger(){
+		levelChanger ();
 	}
 }
