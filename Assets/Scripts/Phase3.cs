@@ -21,19 +21,15 @@ public class Phase3: MonoBehaviour {
     // Use this for initialization
     public void Start () {
 		dialogue = new List<TextElement> ();
-		//EventManager.CallTextWriter (dialogue);
 		button = lever_Object.gameObject.GetComponent<clickButton>();
-
 	}
 
 	public void EnablePhase(){
 		dialogue.Add (new TextElement("Shit",0.1f,4f));
-		dialogue.Add (new TextElement("Hang tight",0.1f,2f));
 		dialogue.Add (new TextElement("Lost sight of you",0.1f,4f));
 		dialogue.Add (new TextElement("Hold on",0.1f,4f));
 		dialogue.Add (new TextElement("Looks like you've got an oxygen leak.",0.1f,4f));
 		dialogue.Add (new TextElement("Switch to your back up tank",0.1f,2f));
-		dialogue.Add (new TextElement("We can fix this",0.1f,4f));
 		dialogue.Add (new TextElement("I'll focus on getting you out",0.1f,4f));
 		EventManager.CallTextWriter (dialogue);
 		state = 1;

@@ -16,15 +16,12 @@ public class Phase1 : MonoBehaviour {
 	public bool startDescent;
 	List<TextElement> dialogue;
 	bool isPhaseActive = true;
-
 	//the audio clips for this phase
 	public AudioClip[] phase1AudioClips;
 	public AudioClip[] phase1SfxClips;
 
-
-
-
-
+	public void Awake(){
+	}
 
     // Use this for initialization
     public void Start () {
@@ -42,8 +39,7 @@ public class Phase1 : MonoBehaviour {
 		dialogue.Add (new TextElement("Why are you descending?",0.1f,4f));
 		dialogue.Add (new TextElement("It's alright",0.1f,2f));
 		dialogue.Add (new TextElement("We can fix this",0.1f,4f));
-		dialogue.Add (new TextElement("Pull that lever to your right",0.1f,4f));
-		dialogue.Add (new TextElement("That should put you back on course",0.1f,5f));
+		dialogue.Add (new TextElement("Pull that lever to your left",0.1f,4f));
 		EventManager.CallTextWriter (dialogue);
 	}
 	
@@ -78,9 +74,13 @@ public class Phase1 : MonoBehaviour {
 		//Reached the top
 		AudioManager.instance.StopMusic();
 		AudioManager.instance.PlayOneShotSFX (phase1SfxClips [0]);
+
+
+
 		//Trigger the audio to stop
 		yield return new WaitForSeconds (5.0f);
 		EventManager.CameraShaker (0.03f, 0.0005f);
+		AudioManager.instance.PlayMusic (AudioManager.instance.generalSFX[2],true);
 		yield return new WaitForSeconds (3.0f);
 		EventManager.CameraShaker (0.03f, 0.00009f);
 		EventManager.CallRockMovement (1);
@@ -97,6 +97,10 @@ public class Phase1 : MonoBehaviour {
 		yield return new WaitForSeconds (3.0f);
 		EventManager.CameraShaker (0.03f, 0.00009f);
 		startDescent = true;
+		AudioManager.instance.StopMusic();
+
+		AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [0],true);
+		AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [1],true);
 	}
 
 	public void DisablePhase(){
