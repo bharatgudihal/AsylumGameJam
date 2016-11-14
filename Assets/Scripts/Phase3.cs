@@ -66,11 +66,12 @@ public class Phase3: MonoBehaviour {
 
 		case 2:
 			//Read the player input
-			if (button.isTrigger == true) 
-			{
-				StartCoroutine (stateTwo());
-				button.isTrigger = false;
-			}
+			//if (button.isTrigger == true) 
+			//{
+			StartCoroutine (stateTwo ());
+			state++;
+				//button.isTrigger = false;
+			//}
 			break;
 
 		case 3:
@@ -82,7 +83,7 @@ public class Phase3: MonoBehaviour {
 
 	IEnumerator stateTwo()
 	{
-		yield return new WaitForSeconds (1.0f);
+		yield return new WaitForSeconds (10.0f);
 		StartCoroutine (LightShake());
 	}
 

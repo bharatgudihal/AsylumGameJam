@@ -54,36 +54,36 @@ public class Phase4 : MonoBehaviour
 	{
 		if (step == 7) 
 		{
-			if (button_L.isTrigger == true || button_R.isTrigger == true) 
-			{
-				button_L.isTrigger = false;
-				button_R.isTrigger = false;
+			//if (button_L.isTrigger == true || button_R.isTrigger == true) 
+			//{
+				//button_L.isTrigger = false;
+				//button_R.isTrigger = false;
 
 				StartCoroutine (Shinning (1.0f));
 				StartCoroutine (callText ("Again", 0.1f, 8));
 				AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [4], true);
 				AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [5], true);
 				AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [6], true);
-			}
+			//}
 		}
 		if (step == 8) 
 		{
-			if (button_L.isTrigger == true || button_R.isTrigger == true) 
-			{
-				button_L.isTrigger = false;
-				button_R.isTrigger = false;
+			//if (button_L.isTrigger == true || button_R.isTrigger == true) 
+			//{
+				//button_L.isTrigger = false;
+				//button_R.isTrigger = false;
 
 				StartCoroutine (Shinning (1.0f));
 				StartCoroutine (callText ("Again", 0.1f, 9));
-			}
+			//}
 		}
 
 		if (step == 9) 
 		{
-			if (button_L.isTrigger == true || button_R.isTrigger == true) 
-			{
-				button_L.isTrigger = false;
-				button_R.isTrigger = false;
+			//if (button_L.isTrigger == true || button_R.isTrigger == true) 
+			//{
+				//button_L.isTrigger = false;
+				//button_R.isTrigger = false;
 
 				StartCoroutine (callText ("Good", 0.1f, 10));
 				cabinLight.intensity = 0;
@@ -91,7 +91,7 @@ public class Phase4 : MonoBehaviour
 				StartCoroutine (TurnOffLights ());
 				EventManager.CallEffectsStarter ();
 				EventManager.CallPhaseChanger ();
-			}
+			//}
 		}
 
 	}
