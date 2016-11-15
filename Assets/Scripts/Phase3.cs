@@ -25,13 +25,6 @@ public class Phase3: MonoBehaviour {
 	}
 
 	public void EnablePhase(){
-		dialogue.Add (new TextElement("Shit",0.1f,4f));
-		dialogue.Add (new TextElement("Lost sight of you",0.1f,4f));
-		dialogue.Add (new TextElement("Hold on",0.1f,4f));
-		dialogue.Add (new TextElement("Looks like you've got an oxygen leak.",0.1f,4f));
-		dialogue.Add (new TextElement("I'll focus on getting you out while you fix the leak",0.1f,4f));
-		//dialogue.Add (new TextElement("Try to fix the leak",0.1f,2f));
-		EventManager.CallTextWriter (dialogue);
 		state = 1;
 		AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [2], true);
 		AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [3], true);
@@ -39,6 +32,7 @@ public class Phase3: MonoBehaviour {
 		backgroundMusic.clip = AudioManager.instance.generalEnvironment[10];
 		backgroundMusic.loop = true;
 		backgroundMusic.Play ();
+		StartCoroutine (DialogManager ());
 	}
 
 	public void DisablePhase(){
@@ -60,7 +54,6 @@ public class Phase3: MonoBehaviour {
 			if (timer > descentTime)
 			{
 				timer = 0f;
-				state++;
 			}
 			break;
 
@@ -68,7 +61,7 @@ public class Phase3: MonoBehaviour {
 			//Read the player input
 			//if (button.isTrigger == true) 
 			//{
-			StartCoroutine (stateTwo ());
+			StartCoroutine (LightShake ());
 			state++;
 				//button.isTrigger = false;
 			//}
@@ -81,15 +74,15 @@ public class Phase3: MonoBehaviour {
 		}
 	}
 
-	IEnumerator stateTwo()
-	{
-		yield return new WaitForSeconds (10.0f);
-		StartCoroutine (LightShake());
-	}
+	//IEnumerator stateTwo()
+	//{
+		//yield return new WaitForSeconds (10.0f);
+		//StartCoroutine (LightShake());
+	//}
 
 
 	IEnumerator  LightShake(){
-		yield return new WaitForSeconds (30.0f);
+		//yield return new WaitForSeconds (30.0f);
 		//Reached the top
 		AudioManager.instance.PlayOneShotSFX(AudioManager.instance.generalSFX[4]);
 		//AudioManager.instance.PlayOneShotSFX (phase1SfxClips [0]);
@@ -98,7 +91,7 @@ public class Phase3: MonoBehaviour {
 			effect.Enable ();
 		}
 
-		dialogue.Add (new TextElement("That will buy you some time", 0.1f, 4f));
+		dialogue.Add (new TextElement("That will buy you some time", 0.08f, 4f));
 
 		EventManager.CallTextWriter (dialogue);
 		EventManager.CallLevelChanger ();
@@ -116,5 +109,31 @@ public class Phase3: MonoBehaviour {
 
 	}
 
+	IEnumerator DialogManager(){		
+		dialogue.Add (new TextElement("Shit",0.08f,1f));
+		EventManager.CallTextWriter (dialogue);
+		yield return new WaitForSeconds (4f);
+		dialogue.Clear ();
+		dialogue.Add (new TextElement("Lost sight of you",0.08f,1f));
+		EventManager.CallTextWriter (dialogue);
+		yield return new WaitForSeconds (4f);
+		dialogue.Clear ();
+		dialogue.Add (new TextElement("Hold on",0.08f,1f));
+		EventManager.CallTextWriter (dialogue);
+		yield return new WaitForSeconds (3f);
+		dialogue.Clear ();
+		dialogue.Add (new TextElement("Looks like you've got an oxygen leak.",0.08f,1f));
+		EventManager.CallTextWriter (dialogue);
+		yield return new WaitForSeconds (6f);
+		dialogue.Clear ();
+		dialogue.Add (new TextElement("I'll focus on getting you out while you fix it",0.08f,4f));
+		EventManager.CallTextWriter (dialogue);
+		yield return new WaitForSeconds (10f);
+		EventManager.triggerEvent += triggerEvent;
+	}
 
+	void triggerEvent(){
+		EventManager.triggerEvent -= triggerEvent;
+		state++;
+	}
 }

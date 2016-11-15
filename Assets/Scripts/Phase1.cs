@@ -39,15 +39,7 @@ public class Phase1 : MonoBehaviour {
 		button = Lever.gameObject.GetComponent<clickButton> ();
 
 		dialogue = new List<TextElement> ();
-		dialogue.Add (new TextElement("Glad to have you back!",0.1f,4f));
-		dialogue.Add (new TextElement("Hang tight",0.1f,2f));
-		dialogue.Add (new TextElement("I'll have you on land in no time",0.1f,4f));
-		dialogue.Add (new TextElement("What's going on?",0.1f,5f));
-		dialogue.Add (new TextElement("Why are you descending?",0.1f,4f));
-		dialogue.Add (new TextElement("It's alright",0.1f,2f));
-		dialogue.Add (new TextElement("We can fix this",0.1f,4f));
-		dialogue.Add (new TextElement("Activate the crane override",0.1f,4f));
-		EventManager.CallTextWriter (dialogue);
+		StartCoroutine (DialogManager ());
 		backgroundMusic.clip = AudioManager.instance.generalEnvironment [7];
 		backgroundMusic.loop = true;
 		backgroundMusic.Play ();
@@ -79,7 +71,6 @@ public class Phase1 : MonoBehaviour {
 				if (timer > phase1WaitTime) 
 				{
 					startDescent = false;
-					interactionStep = true;
 				}
 			}
 
@@ -100,8 +91,8 @@ public class Phase1 : MonoBehaviour {
 
 	IEnumerator interaction()
 	{
-		yield return new WaitForSeconds (5f);	
-		EventManager.CalldisplayStrings ("That should put you back on course", 0.1f, 0.5f);
+		yield return new WaitForSeconds (1f);	
+		EventManager.CalldisplayStrings ("That should put you back on course", 0.08f, 0.5f);
 		EventManager.CallPhaseChanger ();
 		startDescent = false;
 	}
@@ -116,7 +107,7 @@ public class Phase1 : MonoBehaviour {
 
 
 		//Trigger the audio to stop
-		yield return new WaitForSeconds (5.0f);
+		yield return new WaitForSeconds (2.0f);
 		EventManager.CameraShaker (0.03f, 0.0005f);
 		AudioManager.instance.PlayMusic (AudioManager.instance.generalSFX[2],false);
 		AudioManager.instance.PlayMusic (AudioManager.instance.generalSFX[3],true);
@@ -148,5 +139,46 @@ public class Phase1 : MonoBehaviour {
 
 	public void DisablePhase(){
 		isPhaseActive = false;
+	}
+
+	public void triggerEvent(){
+		EventManager.triggerEvent -= triggerEvent;
+		interactionStep = true;
+	}
+
+	IEnumerator DialogManager(){
+		dialogue.Add (new TextElement("Glad to have you back!",0.08f,1f));
+		EventManager.CallTextWriter (dialogue);
+		yield return new WaitForSeconds (4f);
+		dialogue.Clear ();
+		dialogue.Add (new TextElement("Hang tight",0.08f,1f));
+		EventManager.CallTextWriter (dialogue);
+		yield return new WaitForSeconds (4f);
+		dialogue.Clear ();
+		dialogue.Add (new TextElement("I'll have you on land in no time",0.08f,1f));
+		EventManager.CallTextWriter (dialogue);
+		yield return new WaitForSeconds (7f);
+		dialogue.Clear ();
+		dialogue.Add (new TextElement("What's going on?",0.08f,1f));
+		EventManager.CallTextWriter (dialogue);
+		yield return new WaitForSeconds (10f);
+		dialogue.Clear ();
+		dialogue.Add (new TextElement("Why are you descending?",0.08f,1f));
+		EventManager.CallTextWriter (dialogue);
+		yield return new WaitForSeconds (5f);
+		dialogue.Clear();
+		dialogue.Add (new TextElement("It's alright",0.08f,1f));
+		EventManager.CallTextWriter (dialogue);
+		yield return new WaitForSeconds (3f);
+		dialogue.Clear();
+		dialogue.Add (new TextElement("We can fix this",0.08f,1f));
+		EventManager.CallTextWriter (dialogue);
+		yield return new WaitForSeconds (4f);
+		dialogue.Clear();
+		dialogue.Add (new TextElement("Activate the crane override",0.08f,3f));
+		EventManager.CallTextWriter (dialogue);
+		yield return new WaitForSeconds (4f);
+		EventManager.triggerEvent += triggerEvent;
+		yield return 0;
 	}
 }

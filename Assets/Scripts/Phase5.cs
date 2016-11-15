@@ -20,6 +20,7 @@ public class Phase5: MonoBehaviour {
 	public AudioClip slowDownClip;
 	public AudioClip monsterClip;
 	public AudioSource backgroundMusic;
+	public GameObject ghoulybaba;
 
     // Use this for initialization
     public void Start () {
@@ -129,19 +130,18 @@ public class Phase5: MonoBehaviour {
 	}
 
 	void FadeInTheMonster(){
-		UltraGhoul.GetComponent<MoveGhoul>().enabled = true;
-		UltraGhoul.GetComponent<Animator>().enabled = true;
+		if (!UltraGhoul.GetComponent<MoveGhoul> ().enabled) {
+			UltraGhoul.GetComponent<MoveGhoul> ().enabled = true;
+			UltraGhoul.GetComponent<Animator> ().enabled = true;
+		}
 	}
 
 	IEnumerator FadeToBlack(){
-
-		float interpolator = 0.01f;
-		while (sprite.color.a < 0.9f) {
-			sprite.color = new Color (sprite.color.r, sprite.color.g, sprite.color.b, Mathf.Lerp (sprite.color.a, 1.0f, interpolator));
-			yield return null;
-		}
-		interpolator = 1.0f;
 		UltraGhoul.SetActive (false);
+		yield return new WaitForSeconds (10f);
+		ghoulybaba.SetActive (true);
+		GetComponent<AudioSource> ().Play ();
+		yield return new WaitForSeconds (2f);
 		//Game Ends
 		EventManager.QuitGame();
 	}

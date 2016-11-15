@@ -37,6 +37,9 @@ public class EventManager : MonoBehaviour {
 	public SeaFloorImpactEffect impactEffect;
 	public static SeaFloorImpactEffect staticImpactEffect;
 
+	public delegate void EventTrigger();
+	public static event EventTrigger triggerEvent;
+
 	// Use this for initialization
 	void Start () {
 		staticImpactEffect = impactEffect;
@@ -95,5 +98,12 @@ public class EventManager : MonoBehaviour {
 
 	public static void QuitGame(){
 		Application.Quit ();
+	}
+
+	public static void CallEventTrigger(){
+		if (null != triggerEvent) {
+			Debug.Log ("Triggered!!");
+			triggerEvent ();
+		}
 	}
 }

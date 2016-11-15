@@ -55,8 +55,6 @@ public class Phase2 : MonoBehaviour {
 	IEnumerator TransitionToPhase3(){
 		yield return new WaitForSeconds (5.0f);
 		EventManager.CallPhaseChanger ();
-
-
 	}
 
 
