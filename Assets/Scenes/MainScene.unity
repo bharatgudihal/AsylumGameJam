@@ -17799,7 +17799,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013290816264, guid: d74eff9d8de1bac4fbbcea3dd5d82571, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -40
+      value: -42
       objectReference: {fileID: 0}
     - target: {fileID: 4000013290816264, guid: d74eff9d8de1bac4fbbcea3dd5d82571, type: 2}
       propertyPath: m_LocalPosition.z
@@ -17983,7 +17983,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -18005,7 +18005,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!114 &1006832696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27378,7 +27378,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 581.5
-  field of view: 28
+  field of view: 30
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

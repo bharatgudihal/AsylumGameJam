@@ -42,11 +42,11 @@ public class Phase1 : MonoBehaviour {
 		dialogue.Add (new TextElement("Glad to have you back!",0.1f,4f));
 		dialogue.Add (new TextElement("Hang tight",0.1f,2f));
 		dialogue.Add (new TextElement("I'll have you on land in no time",0.1f,4f));
-		dialogue.Add (new TextElement("What's going on?",0.1f,4f));
+		dialogue.Add (new TextElement("What's going on?",0.1f,5f));
 		dialogue.Add (new TextElement("Why are you descending?",0.1f,4f));
 		dialogue.Add (new TextElement("It's alright",0.1f,2f));
 		dialogue.Add (new TextElement("We can fix this",0.1f,4f));
-		dialogue.Add (new TextElement("Pull that lever to your right",0.1f,4f));
+		dialogue.Add (new TextElement("Activate the crane override",0.1f,4f));
 		EventManager.CallTextWriter (dialogue);
 		backgroundMusic.clip = AudioManager.instance.generalEnvironment [7];
 		backgroundMusic.loop = true;
@@ -85,11 +85,12 @@ public class Phase1 : MonoBehaviour {
 
 			if (interactionStep == true) 
 			{
-				if (button.isTrigger == true) 
-				{
-					StartCoroutine (interaction());
-					button.isTrigger = false;
-				}
+				//if (button.isTrigger == true) 
+				//{
+					StartCoroutine (interaction());					
+				interactionStep = false;
+				//button.isTrigger = false;
+				//}
 
 			}
 
@@ -99,7 +100,7 @@ public class Phase1 : MonoBehaviour {
 
 	IEnumerator interaction()
 	{
-		yield return new WaitForSeconds (1.0f);	
+		yield return new WaitForSeconds (5f);	
 		EventManager.CalldisplayStrings ("That should put you back on course", 0.1f, 0.5f);
 		EventManager.CallPhaseChanger ();
 		startDescent = false;

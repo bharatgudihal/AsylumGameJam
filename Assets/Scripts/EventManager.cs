@@ -92,4 +92,8 @@ public class EventManager : MonoBehaviour {
 	public static void CallLandingEffect(){
 		staticImpactEffect.Burst ();
 	}
+
+	public static void QuitGame(){
+		Application.Quit ();
+	}
 }
