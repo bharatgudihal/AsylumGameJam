@@ -46,7 +46,7 @@ public class Phase1 : MonoBehaviour {
 		dialogue.Add (new TextElement("Why are you descending?",0.1f,4f));
 		dialogue.Add (new TextElement("It's alright",0.1f,2f));
 		dialogue.Add (new TextElement("We can fix this",0.1f,4f));
-		dialogue.Add (new TextElement("Pull that lever to your right",0.1f,4f));
+		dialogue.Add (new TextElement("Activate the crane override",0.1f,4f));
 		EventManager.CallTextWriter (dialogue);
 		backgroundMusic.clip = AudioManager.instance.generalEnvironment [7];
 		backgroundMusic.loop = true;

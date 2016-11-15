@@ -25,7 +25,7 @@ public class backgroundMoving : MonoBehaviour
 	void Start ()
     {		
 		Max_Position_Y = 205;
-		Min_Position_Y = -195;
+		Min_Position_Y = -193;
 		transform.localPosition = new Vector3(gameObject.transform.localPosition.x, gameObject.transform.localPosition.y, gameObject.transform.localPosition.z);
 		isMovingDown = false;
 		currentLevel = 1;

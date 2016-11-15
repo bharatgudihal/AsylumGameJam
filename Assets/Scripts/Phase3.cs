@@ -29,8 +29,8 @@ public class Phase3: MonoBehaviour {
 		dialogue.Add (new TextElement("Lost sight of you",0.1f,4f));
 		dialogue.Add (new TextElement("Hold on",0.1f,4f));
 		dialogue.Add (new TextElement("Looks like you've got an oxygen leak.",0.1f,4f));
-		dialogue.Add (new TextElement("Pull that lever to your left",0.1f,2f));
-		dialogue.Add (new TextElement("I'll focus on getting you out",0.1f,4f));
+		dialogue.Add (new TextElement("I'll focus on getting you out while you fix the leak",0.1f,4f));
+		//dialogue.Add (new TextElement("Try to fix the leak",0.1f,2f));
 		EventManager.CallTextWriter (dialogue);
 		state = 1;
 		AudioManager.instance.PlayMusic (AudioManager.instance.generalEnvironment [2], true);
@@ -89,7 +89,7 @@ public class Phase3: MonoBehaviour {
 
 
 	IEnumerator  LightShake(){
-		
+		yield return new WaitForSeconds (30.0f);
 		//Reached the top
 		AudioManager.instance.PlayOneShotSFX(AudioManager.instance.generalSFX[4]);
 		//AudioManager.instance.PlayOneShotSFX (phase1SfxClips [0]);
@@ -97,7 +97,6 @@ public class Phase3: MonoBehaviour {
 		foreach (SteamEffect effect in steamEffects) {
 			effect.Enable ();
 		}
-		yield return new WaitForSeconds (2.0f);
 
 		dialogue.Add (new TextElement("That will buy you some time", 0.1f, 4f));
 

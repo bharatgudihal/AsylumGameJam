@@ -76,6 +76,7 @@ public class Phase5: MonoBehaviour {
 		case 4:
 			//Fade to black
 			if (fadeToBlack) {
+				
 				StartCoroutine (FadeToBlack());
 				fadeToBlack = false;
 			}
@@ -135,14 +136,13 @@ public class Phase5: MonoBehaviour {
 	IEnumerator FadeToBlack(){
 
 		float interpolator = 0.01f;
-
-		while(sprite.color.a != 1.0f){
-			sprite.color = new Color(sprite.color.r,sprite.color.g, sprite.color.b,Mathf.Lerp (sprite.color.a, 1.0f, interpolator));
+		while (sprite.color.a < 0.9f) {
+			sprite.color = new Color (sprite.color.r, sprite.color.g, sprite.color.b, Mathf.Lerp (sprite.color.a, 1.0f, interpolator));
 			yield return null;
 		}
 		interpolator = 1.0f;
-		UltraGhoul.SetActive(false);
+		UltraGhoul.SetActive (false);
 		//Game Ends
-
+		EventManager.QuitGame();
 	}
 }
