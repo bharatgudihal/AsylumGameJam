@@ -101,11 +101,16 @@ public class Phase5: MonoBehaviour {
 		//AudioManager.instance.PlayOneShotSFX (phase1SfxClips [0]);
 
 		//Shake
+
+
 		EventManager.CameraShaker (0.04f, 0.0005f);
 		yield return new WaitForSeconds (2.0f);
 		EventManager.CameraShaker (0.05f, 0.0005f);
 		yield return new WaitForSeconds (6.0f);
 		EventManager.CallFloorMover ();
+
+        EventManager.SpinStopTrigger();
+
 		StartCoroutine (Quiet ());
 	}
 
@@ -126,6 +131,9 @@ public class Phase5: MonoBehaviour {
 		backgroundMusic.volume = 1f;
 		backgroundMusic.Play ();
 		yield return new WaitForSeconds (4.0f);
+
+
+
 		state++;
 
 	}

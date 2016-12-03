@@ -115,7 +115,7 @@ public class Phase3: MonoBehaviour {
 		yield return new WaitForSeconds (4f);
 		dialogue.Clear ();
 
-        EventManager.BathySphereSpiner(40, 999);
+        EventManager.BathySphereSpiner(50, 999);
 
 		dialogue.Add (new TextElement("Lost sight of you",0.08f,1f));
 		EventManager.CallTextWriter (dialogue);

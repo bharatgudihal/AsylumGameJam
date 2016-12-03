@@ -9,9 +9,12 @@ public class BathySphereSpin : MonoBehaviour
 
     float initEulerAngle_y = 0.0f;
 
+    bool triggerStop = false;
+
     void Awake()
     {
         EventManager.spinBathySphere += spinSetUp;
+        EventManager.StopBathySpin += stopSpin;
     }
 
 
@@ -28,10 +31,31 @@ public class BathySphereSpin : MonoBehaviour
        
         if (transform.eulerAngles.y < initEulerAngle_y - spinAngle || transform.eulerAngles.y > initEulerAngle_y + spinAngle) 
         {
+            EventManager.CameraShaker (0.01f, 0.00009f);
             spinSpeed = -spinSpeed;
         }
-	}
+         
 
+        if ( triggerStop == true)
+        {
+
+            if (spinSpeed >= 5.0f)
+            {
+                spinSpeed -= 0.5f;
+            }
+
+            if(transform.eulerAngles.y < 180.5f && transform.eulerAngles.y > 179.5)
+            {
+                triggerStop = false;
+                transform.eulerAngles = new Vector3(0, -180, 0);
+                spinSpeed = 0.0f;
+                spinAngle = 0.0f;
+            }
+        }
+
+
+	}
+        
 
     void spinSetUp(float i_spinSpeed, float i_spinAngle)
     {
@@ -42,10 +66,7 @@ public class BathySphereSpin : MonoBehaviour
 
     void stopSpin()
     {
-        if (transform.eulerAngles.y < 180.5f || transform.eulerAngles.y > 179.5)
-        {
-            transform.eulerAngles.y = 180.0f;
-        }
+        triggerStop = true;
     }
 
 

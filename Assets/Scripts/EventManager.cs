@@ -6,9 +6,11 @@ public class EventManager : MonoBehaviour {
 	public delegate void CameraShake (float intensity, float decay);
 	public static event CameraShake shakeCamera;
 
-
     public delegate void BathySphereSpin (float speed, float angle);
     public static event BathySphereSpin spinBathySphere;
+
+    public delegate void BathySpinStop ();
+    public static event BathySpinStop StopBathySpin;
 
 
 	public delegate void WriteText (List<TextElement> dialogue);
@@ -65,6 +67,12 @@ public class EventManager : MonoBehaviour {
     public static void BathySphereSpiner(float speed, float angle)
     {
         spinBathySphere(speed, angle);
+    }
+
+
+    public static void SpinStopTrigger()
+    {
+        StopBathySpin();
     }
 
 
