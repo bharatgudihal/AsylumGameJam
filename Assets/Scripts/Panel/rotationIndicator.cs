@@ -24,6 +24,6 @@ public class rotationIndicator : MonoBehaviour
 		}
 
 //		Debug.Log (transform.localRotation);
-
 	}
+       
 }
