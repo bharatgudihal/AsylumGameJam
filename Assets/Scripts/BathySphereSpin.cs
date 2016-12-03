@@ -39,9 +39,9 @@ public class BathySphereSpin : MonoBehaviour
         if ( triggerStop == true)
         {
 
-            if (spinSpeed >= 5.0f)
+            if (spinSpeed >= 10.0f)
             {
-                spinSpeed -= 0.5f;
+                spinSpeed -= 0.01f;
             }
 
             if(transform.eulerAngles.y < 180.5f && transform.eulerAngles.y > 179.5)
