@@ -123,6 +123,7 @@ public class Phase5: MonoBehaviour {
 		AudioManager.instance.PlayMusic(AudioManager.instance.generalEnvironment[1],true);
 		backgroundMusic.clip = monsterClip;
 		backgroundMusic.loop = false;
+		backgroundMusic.volume = 1f;
 		backgroundMusic.Play ();
 		yield return new WaitForSeconds (4.0f);
 		state++;
